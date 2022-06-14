@@ -1,2 +1,11 @@
 eclipse.preferences.version=1
+encoding//src/com/advance/blog/entity/BlogAuthor.java=UTF-8
+encoding//src/com/advance/blog/entity/BlogCategory.java=UTF-8
+encoding//src/com/advance/blog/entity/BlogComment.java=UTF-8
+encoding//src/com/advance/blog/entity/BlogPost.java=UTF-8
+encoding//src/com/advance/blog/entity/BlogPostToCategory.java=UTF-8
+encoding//src/com/advance/blog/entity/BlogRelated.java=UTF-8
+encoding//src/com/advance/blog/entity/BlogTag.java=UTF-8
+encoding//src/com/advance/blog/entity/BlogUser.java=UTF-8
+encoding//src/com/advance/blog/entity/BlogUserDetail.java=UTF-8
 encoding//src/com/advance/classes/Collections01.java=UTF-8
