@@ -33,14 +33,10 @@ public class App {
 			
 			Map<String, String> map = service.process(cmd);
 			
-			
 			Set<String> keys = map.keySet();
-			
-			
-			
-			
+
 			for (String key : keys) {
-				System.out.println(key + " : " + map.get(keys));
+				System.out.println(key + " : " + map.get(key));
 			}
 			
 		}while(!"exit".equals(cmd));

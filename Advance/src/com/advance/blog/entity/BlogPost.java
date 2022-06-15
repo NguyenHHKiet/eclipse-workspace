@@ -54,7 +54,11 @@ public class BlogPost {
  }
 
  public void setTitle(String title) {
-     this.title = title;
+	 if (title == null){
+		 this.title  = "";
+	 }else {
+		 this.title = title;
+	 }
  }
 
  public String getArticle() {
@@ -153,4 +157,10 @@ public class BlogPost {
      this.commentsEnabled = param.getCommentsEnabled();
      this.views = param.getViews();
  }
+ 
+ @Override
+public String toString() {
+	return "BlogPost {id:" + id + ", title:" + title + ", article:" + article + "}";
+}
+ 
 }
