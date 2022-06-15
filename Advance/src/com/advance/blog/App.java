@@ -1,6 +1,10 @@
 package com.advance.blog;
 
+import java.util.Iterator;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.Set;
+
 import com.advance.blog.service.BlogService;
 import com.advance.blog.dao.BlogMemoryDao;
 
@@ -24,8 +28,21 @@ public class App {
 		String cmd;
 		
 		do {
-			System.out.println();
+			System.out.println("cmd > ");
 			cmd = sc.nextLine();
+			
+			Map<String, String> map = service.process(cmd);
+			
+			
+			Set<String> keys = map.keySet();
+			
+			
+			
+			
+			for (String key : keys) {
+				System.out.println(key + " : " + map.get(keys));
+			}
+			
 		}while(!"exit".equals(cmd));
 		System.out.println("terminated");
 		sc.close();
