@@ -21,7 +21,7 @@ import com.advance.blog.entity.BlogPost;
 
 public class BlogMemoryDao {
 
-	private List<BlogPost> postRepo;
+	protected List<BlogPost> postRepo;
 	private List<BlogCategory> cateRepo;
 	
 	public BlogMemoryDao() {
@@ -101,6 +101,59 @@ public class BlogMemoryDao {
 		postRepo.remove(del);
 	}
 	
-	
-	
+	//category
+	public void save(BlogCategory arg) {
+	// auto-increment : id have to be unique
+			if (arg.getId() != null) {
+				for (BlogCategory category : cateRepo) {
+					if (category.getId().intValue() == arg.getId().intValue()) {
+						category.CopyData(arg);
+					}
+				}
+			} else {
+				arg.setId(cateRepo.size() + 1);
+				cateRepo.add(arg);
+			}
+		}
+
+	public BlogCategory findLastCategory() {
+// TODO: 1. List can have same data, 2. need to override equal()
+		return (cateRepo.size() == 0) ? null : cateRepo.get(cateRepo.size() - 1);
+	}
+
+	public List<BlogCategory> findListCategoryByString(String key) {
+
+		List<BlogCategory> list = new ArrayList<BlogCategory>();
+		for (BlogCategory category : cateRepo) {
+			if (category.getName().contains(key) ) {
+				list.add(category);
+			}
+		}
+		return list;// to service
+	}
+
+	public List<BlogCategory> findCategoryAll() {
+		return cateRepo;
+	}
+
+	public BlogCategory findCategoryById(Integer id) {
+		for (BlogCategory category : cateRepo) {
+			if (category.getId().intValue() == id.intValue()) {
+				return category;
+			}
+		}
+		return null;
+	}
+
+	public void deleteCategory(Integer id) {
+		BlogCategory del = null;
+		for (BlogCategory category : cateRepo) {
+			if (category.getId().intValue() == id.intValue()) {
+				del = category;
+				break;
+			}
+		}
+		cateRepo.remove(del);
+
+	}
 }

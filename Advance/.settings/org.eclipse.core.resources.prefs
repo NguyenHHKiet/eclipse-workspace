@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//src/com/advance/blog/App.java=UTF-8
 encoding//src/com/advance/blog/entity/BlogAuthor.java=UTF-8
 encoding//src/com/advance/blog/entity/BlogCategory.java=UTF-8
 encoding//src/com/advance/blog/entity/BlogComment.java=UTF-8

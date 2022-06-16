@@ -92,9 +92,25 @@ public class BlogService {
 				}
 				
 				//category
-				
+				if( req[0].equals("category/add") ) {
+					registCategory(model);
+				}
+				if( req[0].equals("category/search") ) {
+					getCategoryByString(model);
+//					getCategoryWithCategory(model);
+				}
+				if( req[0].equals("category/view") ) {
+					getCategoryById(model);
+				}
+				if( req[0].equals("category/update") ) {
+					updateCategory(model);
+				}
+				if( req[0].equals("category/delete") ) {
+					deleteCategory(model);
+				}
 			}else {
 				// model include req, resp
+				model.put("400","Bad Request : need paramter");
 				
 			}
 		}

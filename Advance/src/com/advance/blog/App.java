@@ -1,11 +1,11 @@
 package com.advance.blog;
 
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
 import com.advance.blog.service.BlogService;
+import com.advance.blog.dao.BlogFileDao;
 import com.advance.blog.dao.BlogMemoryDao;
 
 /**
@@ -17,9 +17,12 @@ import com.advance.blog.dao.BlogMemoryDao;
 public class App {
 
 	public static void main(String[] args) {
-		//
+		//call static method
+		//dependency injection
 		new BlogService();
-		App.run(new BlogService(new BlogMemoryDao()) );
+//		App.run(new BlogService(new BlogMemoryDao()) );
+		App.run(new BlogService(new BlogFileDao()) );
+		
 	}
 
 	private static void run(BlogService service) {
