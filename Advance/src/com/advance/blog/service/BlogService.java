@@ -164,6 +164,9 @@ public class BlogService {
 
 	private void registCategory(Map<String, String> model) {
 		// TODO Auto-generated method stub
+		
+		
+		
 		model.put("msg", new Object() {}.getClass().getEnclosingMethod().getName());
 	}
 

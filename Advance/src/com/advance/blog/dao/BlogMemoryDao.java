@@ -42,6 +42,7 @@ public class BlogMemoryDao {
 			}
 		}else {
 			arg.setId(postRepo.size() + 1);
+			
 			postRepo.add(arg);
 		}
 		

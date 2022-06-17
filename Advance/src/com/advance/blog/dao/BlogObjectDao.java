@@ -12,15 +12,15 @@ import com.advance.blog.entity.BlogPost;
 public class BlogObjectDao extends BlogMemoryDao {
 	private static final String FILENAME = "blog-object.dat";
 	
-	public static void main(String[] args) {
-		BlogPost post = new BlogPost();
-		post.setId(1);
-		post.setTitle("das");
-		post.setArticle("hok");
-		
-		writeObj(post);
-		readObj();
-	}
+//	public static void main(String[] args) {
+//		BlogPost post = new BlogPost();
+//		post.setId(1);
+//		post.setTitle("das");
+//		post.setArticle("hok");
+//		
+//		writeObj(post);
+//		readObj();
+//	}
 
 	private static void readObj() {
 		// TODO Auto-generated method stub

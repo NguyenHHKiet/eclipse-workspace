@@ -27,7 +27,7 @@ public class BlogFileDao extends BlogMemoryDao  {
 	}
 	private void loadData() throws IOException {
 		BufferedReader br = new BufferedReader(new FileReader(datafile));
-		System.out.println(datafile.list());
+
 		String line;
 		while( (line = br.readLine()) != null) {
 			BlogPost post = new BlogPost();
