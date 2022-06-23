@@ -26,4 +26,16 @@
     <!--
     <Manager pathname="" />
     -->
+    
+    <Resource 
+    		name="jdbc/mysql"
+            auth="Container"
+            type="javax.sql.DataSource"
+            username="root"
+            password=""
+            driverClassName="org.hsql.jdbcDriver"
+            url="jdbc:mysql://localhost:3306/blog"
+            maxActive="50"
+            maxWait="-1"/>
+    
 </Context>
