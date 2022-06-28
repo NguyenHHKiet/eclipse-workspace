@@ -4,14 +4,18 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Function;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
+import org.eclipse.jdt.internal.compiler.ast.ReturnStatement;
+
 import com.coding.entity.BlogUser;
 
-public class BlogUserDao {
+public class BlogUserDao implements BlogDao<BlogUser>{
 	
 	private Connection conn;
 	private PreparedStatement pstmt;
@@ -67,9 +71,9 @@ public class BlogUserDao {
 //		con.close();
 
 	private Object action(Function<String, Object> action ) {
-		// TODO Auto-generated method stub
-		connect();
+		// TODO Auto-generated method stub		
 		try {
+			connect();
 			return action.apply("apply : ");
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -110,6 +114,101 @@ public class BlogUserDao {
 			}
 			return null;
 		});
+	}
+	
+	
+	// view chua show ra toan bo du lieu tren html, nhung method da lay duoc gia tri cua user
+	@SuppressWarnings("unchecked")
+	public List<BlogUser> findAll() {
+		
+		return (List<BlogUser>) action( s -> {
+			try {				
+				pstmt = conn.prepareStatement("select * from blog_user");
+				rs = pstmt.executeQuery();
+				List<BlogUser> list = new ArrayList<BlogUser>();
+				while (rs.next()) {
+					BlogUser user = new BlogUser();
+					user.setUser_id(rs.getInt("user_id"));
+					user.setName(rs.getString("name"));
+					user.setEmail(rs.getString("email"));
+					list.add(user);
+				}
+				return list;
+			} catch (Exception e) {
+				// TODO: handle exception
+				e.printStackTrace();
+			}
+			return null;
+		}) ;
+	}
+	
+	//create user insert into database complete, nhung chua co bat truong hop name, email trung nhau..
+	@Override
+	public int insert(BlogUser arg) {
+		// TODO Auto-generated method stub
+		String sql = "insert into blog_user (name, email) values (?,?)";
+		
+		return (int) action( s -> {
+			try {
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setString(1, arg.getName());
+				pstmt.setString(2, arg.getEmail());
+				return pstmt.executeUpdate();
+			} catch (SQLException e) {
+				// TODO: handle exception
+				e.printStackTrace();
+			}
+			return 0;
+		});
+	}
+	
+	// login chua kiem tra duoc name va email co ton tai o database hay khong?
+	public BlogUser login(BlogUser arg) {
+		String sql = "select * from blog_user where name=? and email=?";
+		
+		return (BlogUser) action( s -> {
+			try {
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setString(1, arg.getName());
+				pstmt.setString(2, arg.getEmail());
+				rs = pstmt.executeQuery();
+				BlogUser test = new BlogUser();
+				if (rs.next()) {
+					
+					test.setName(rs.getString("name"));
+					test.setEmail(rs.getString("email"));
+				}
+				return test;
+			} catch (SQLException e) {
+				// TODO: handle exception
+				e.printStackTrace();
+			}
+			return null;
+		});
+	}
+
+	@Override
+	public BlogUser findOne(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<BlogUser> find(BlogUser arg) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void update(BlogUser arg) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

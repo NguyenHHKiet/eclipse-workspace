@@ -10,6 +10,9 @@ public class BlogUser {
 		this.name = name;
 		this.email = email;
 	}
+	public BlogUser() {
+		// TODO Auto-generated constructor stub
+	}
 	public int getUser_id() {
 		return user_id;
 	}
