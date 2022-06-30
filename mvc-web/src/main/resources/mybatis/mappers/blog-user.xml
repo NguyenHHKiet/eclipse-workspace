@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="blog.user">
+
+	<select id="recentOne" resultType="com.coding.entity.BLogUser">
+	<![CDATA[
+		select * from blog_user order by id desc limit 1
+	]]>
+	</select>
+
+	<select id="findAll" resultType="com.coding.entity.BLogUser">
+	<![CDATA[
+		select * from blog_user order by id;
+	]]>
+	</select>
+	
+	<select id="findId" parameterType="int" resultType="com.coding.entity.BlogUser">
+	<![CDATA[
+		select * from blog_user where id = #{id};
+	]]>
+	</select>
+
+	<insert id="insertUser" parameterType="com.coding.entity.BLogUser">
+	<![CDATA[
+		insert into blog_user (name, email) values (#{name}, #{email});
+	]]>
+	</insert>
+	
+	<update id="updateUser" parameterType="com.coding.entity.BLogUser">
+	<![CDATA[
+		update blog_user set name=#{name}, email=#{email} where id=#{id};
+	]]>
+	</update>
+	
+	<delete id="deleteUser" parameterType="int">
+	<![CDATA[
+		delete from blog_user where id=#{id};
+	]]>
+	</delete>
+
+</mapper>
+	
+	
+	

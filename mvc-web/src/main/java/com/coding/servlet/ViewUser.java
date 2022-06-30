@@ -9,12 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
-import org.thymeleaf.templatemode.TemplateMode;
-import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 
-import com.coding.dao.BlogUserDao;
 import com.coding.entity.BlogUser;
 import com.coding.services.BlogWebServices;
 
@@ -54,7 +50,8 @@ public class ViewUser extends HttpServlet {
 		
 		Context context = new Context();
 		System.out.println("User == " + user.get(0).getName());
-		context.setVariable("person", user);
+		context.setVariable("persons", user);
+		
 		
 //		TemplateEngine temp = new TemplateEngine();
 //		temp.setTemplateResolver(resolver);
@@ -63,6 +60,7 @@ public class ViewUser extends HttpServlet {
 //		response.getWriter().append(html);
 
 		request.getRequestDispatcher("WEB-INF/user/view.html").forward(request, response);
+		request.setAttribute("persons", user);
 	}
 
 	/**

@@ -1,23 +1,23 @@
 package com.coding.entity;
 
 public class BlogUser {
-	private int user_id;
+	private int userId;
 	private String name;
 	private String email;
-	public BlogUser(int user_id, String name, String email) {
+	public BlogUser(int userId, String name, String email) {
 		super();
-		this.user_id = user_id;
+		this.userId = userId;
 		this.name = name;
 		this.email = email;
 	}
 	public BlogUser() {
 		// TODO Auto-generated constructor stub
 	}
-	public int getUser_id() {
-		return user_id;
+	public int getuserId() {
+		return userId;
 	}
-	public void setUser_id(int user_id) {
-		this.user_id = user_id;
+	public void setuserId(int userId) {
+		this.userId = userId;
 	}
 	public String getName() {
 		return name;

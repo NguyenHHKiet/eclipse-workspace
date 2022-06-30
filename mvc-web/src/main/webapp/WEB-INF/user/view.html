@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"  xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -144,10 +144,10 @@ section{
         </tr>
        -->
         
-        <tr th:each="person : ${person}">
-          <td th:text="${person.user_id}">...</td>
-          <td th:text="${person.name}">...</td>
-          <td th:text="${person.email}">...</td>
+        <tr th:each="person : ${persons}">
+          <td th:text="${person.user_id}">Code ID</td>
+          <td th:text="${person.name}">Company Name</td>
+          <td th:text="${person.email}">Email</td>
           <td><a href="edit?id=${person.user_id}">Edit</a></td>
           <td><a href="delete?id=${person.user_id}">Delete</a></td>
         </tr>

@@ -1,196 +1,62 @@
 package com.coding.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
+import java.io.Reader;
 import java.util.List;
-import java.util.function.Function;
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.sql.DataSource;
-
-import org.eclipse.jdt.internal.compiler.ast.ReturnStatement;
+import org.apache.ibatis.io.*;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import com.coding.entity.BlogUser;
 
 public class BlogUserDao implements BlogDao<BlogUser>{
-	
-	private Connection conn;
-	private PreparedStatement pstmt;
-	private ResultSet rs;
-	
-	private void connect() {
-		// TODO Auto-generated method stub
-		
-		try {
-			Context ctx = new InitialContext();
-			DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/mysql");
-			conn = ds.getConnection();
-			
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
-	}
-	
-	private void closeAll() {
-		// TODO Auto-generated method stub
-		try {
-			if(rs!=null) rs.close();
-			if(pstmt!=null) pstmt.close();
-			if(conn!=null) conn.close();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-	}
-	
-//		Context ctx = new InitialContext();
-//		DataSource ds = (DataSource) ctx.lookup("java:comp/env/jdbc/mysql");
-//		Connection con = ds.getConnection();
-//		System.out.println(con);
-//		
-//		//sql : ResultSet (select)
-//		// = equals, like contains (%ho endwith, ho% startwith)
-//		String sql= "select * from blog_user ";
-//		
-//		PreparedStatement pstmt = con.prepareStatement(sql);
-//		ResultSet rs = pstmt.executeQuery();
-//		
-//		while (rs.next()) {
-//			//row and column
-//			BlogUser user = new BlogUser(
-//					rs.getInt("user_id"),
-//					rs.getString("name"),
-//					rs.getString("email")
-//					);
-//			System.out.println(user);
-//		}
-//		rs.close();
-//		pstmt.close();
-//		con.close();
 
-	private Object action(Function<String, Object> action ) {
-		// TODO Auto-generated method stub		
-		try {
-			connect();
-			return action.apply("apply : ");
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			closeAll();
-		}
-		return null;
-	}
+	private static SqlSessionFactory sqlFactory;
 	
-	public BlogUser findById(int id) {
-		// TODO Auto-generated method stub
-		
-//		Function<String, Object> exe = (s) ->{
-//			System.out.println("hi hihi");
-//			return null;
-//		};
-		
-		return (BlogUser) action( (s) ->
-		{
-			System.out.println(s);
-			String sql = "select * from blog_user where user_id =?";
+	private static SqlSessionFactory getSqlSessionFactory() {
+		if (sqlFactory == null) {
+			
+			String resources = "mybatis/mybatis-config.xml";
+			Reader rd = null;
 			
 			try {
-				pstmt = conn.prepareStatement(sql);
-				pstmt.setInt(1, id);
-				rs = pstmt.executeQuery();
-				if (rs.next()) {
-					BlogUser user = new BlogUser(
-							rs.getInt("user_id"),
-							rs.getString("name"),
-							rs.getString("email")
-							);
-					return user;//of apply
-				}
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			return null;
-		});
-	}
-	
-	
-	// view chua show ra toan bo du lieu tren html, nhung method da lay duoc gia tri cua user
-	@SuppressWarnings("unchecked")
-	public List<BlogUser> findAll() {
-		
-		return (List<BlogUser>) action( s -> {
-			try {				
-				pstmt = conn.prepareStatement("select * from blog_user");
-				rs = pstmt.executeQuery();
-				List<BlogUser> list = new ArrayList<BlogUser>();
-				while (rs.next()) {
-					BlogUser user = new BlogUser();
-					user.setUser_id(rs.getInt("user_id"));
-					user.setName(rs.getString("name"));
-					user.setEmail(rs.getString("email"));
-					list.add(user);
-				}
-				return list;
+				
+				rd = Resources.getResourceAsReader(resources);
+				sqlFactory = new SqlSessionFactoryBuilder().build(rd);
 			} catch (Exception e) {
 				// TODO: handle exception
 				e.printStackTrace();
 			}
-			return null;
-		}) ;
-	}
-	
-	//create user insert into database complete, nhung chua co bat truong hop name, email trung nhau..
-	@Override
-	public int insert(BlogUser arg) {
-		// TODO Auto-generated method stub
-		String sql = "insert into blog_user (name, email) values (?,?)";
-		
-		return (int) action( s -> {
-			try {
-				pstmt = conn.prepareStatement(sql);
-				pstmt.setString(1, arg.getName());
-				pstmt.setString(2, arg.getEmail());
-				return pstmt.executeUpdate();
-			} catch (SQLException e) {
-				// TODO: handle exception
-				e.printStackTrace();
-			}
-			return 0;
-		});
-	}
-	
-	// login chua kiem tra duoc name va email co ton tai o database hay khong?
-	public BlogUser login(BlogUser arg) {
-		String sql = "select * from blog_user where name=? and email=?";
-		
-		return (BlogUser) action( s -> {
-			try {
-				pstmt = conn.prepareStatement(sql);
-				pstmt.setString(1, arg.getName());
-				pstmt.setString(2, arg.getEmail());
-				rs = pstmt.executeQuery();
-				BlogUser test = new BlogUser();
-				if (rs.next()) {
-					
-					test.setName(rs.getString("name"));
-					test.setEmail(rs.getString("email"));
+			if (rd != null) {
+				try {
+					rd.close();
+				} catch (Exception e) {
+					// TODO: handle exception
+					e.printStackTrace();
 				}
-				return test;
-			} catch (SQLException e) {
-				// TODO: handle exception
-				e.printStackTrace();
 			}
-			return null;
-		});
+			
+		}
+		return sqlFactory;
 	}
-
+	
 	@Override
 	public BlogUser findOne(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		sqlFactory = getSqlSessionFactory();
+		SqlSession session = sqlFactory.openSession();
+		return (BlogUser) session.selectOne("blog.user.findId", id);
+	}
+
+	@Override
+	public List<BlogUser> findAll() {
+		// TODO Auto-generated method stub
+		//data source
+		sqlFactory = getSqlSessionFactory();
+		//data source . get Connection
+		SqlSession session = sqlFactory.openSession();
+		List<BlogUser> list = session.selectList("blog.user.findAll");
+		return list;
 	}
 
 	@Override
@@ -200,16 +66,41 @@ public class BlogUserDao implements BlogDao<BlogUser>{
 	}
 
 	@Override
+	public int insert(BlogUser arg) {
+		// TODO Auto-generated method stub
+		sqlFactory = getSqlSessionFactory();
+		SqlSession session = sqlFactory.openSession();
+		session.insert("blog.user.insertUser", arg);
+		session.commit();
+		return 0;
+	}
+
+	@Override
 	public void update(BlogUser arg) {
 		// TODO Auto-generated method stub
-		
+		sqlFactory = getSqlSessionFactory();
+		SqlSession session = sqlFactory.openSession();
+		session.insert("blog.user.updateUser", arg);
+		session.commit();
 	}
 
 	@Override
 	public void delete(int id) {
 		// TODO Auto-generated method stub
-		
+		sqlFactory = getSqlSessionFactory();
+		SqlSession session = sqlFactory.openSession();
+		session.insert("blog.user.deleteUser", id);
+		session.commit();
 	}
 	
-	
+	public BlogUser findRecent() {
+		sqlFactory = getSqlSessionFactory();
+		SqlSession session = sqlFactory.openSession();
+		return (BlogUser) session.selectOne("blog.user.recentOne");
+	}
+
+	public boolean login(BlogUser user) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

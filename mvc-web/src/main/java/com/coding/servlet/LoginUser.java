@@ -6,7 +6,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import com.coding.entity.BlogUser;
 import com.coding.services.BlogWebServices;
@@ -57,11 +56,19 @@ public class LoginUser extends HttpServlet {
 		
 		boolean isValue = userlogin.loginUser(user);
 		
-		if (isValue) {
-			System.out.println("Login");
-		}else {
-			System.out.println("Fail");
+		try {
+			if (isValue) {
+				System.out.println("Login");
+				response.sendRedirect("index.html");
+			}else {
+				System.out.println("Fail");
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
 		}
+		
+		
 	
 		
 	}
