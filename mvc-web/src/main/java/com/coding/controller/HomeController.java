@@ -17,7 +17,7 @@ import com.coding.services.BlogWebServices;
 import com.coding.utils.TemplateFactory;
 
 
-@WebServlet("/home")
+//@WebServlet("/home")
 public class HomeController implements Controller {
 	private static final long serialVersionUID = 1L;
 	private BlogWebServices service;
@@ -25,7 +25,7 @@ public class HomeController implements Controller {
         super();
         this.service = new BlogWebServices();
     }
-
+    @Deprecated
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 //		response.setContentType("text/html; charset=utf-8");
@@ -37,7 +37,7 @@ public class HomeController implements Controller {
 		response.getWriter().append(html);
 		
 	}
-
+    @Deprecated
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}
@@ -71,7 +71,13 @@ public class HomeController implements Controller {
 	@Override
 	public String execute(Map<String, Object> model) throws Exception {
 		// TODO Auto-generated method stub
-		return null;
+		BlogPost post = service.getRecentPost();
+		String author_name = service.getAuthorName( post.getAuthorId() );
+		String[] tags = service.getTagsBy( post.getId());
+		model.put("post", post);
+		model.put("authorname", author_name);
+		model.put("tags", tags);
+		return ("fanadesh/index");
 	}
 
 }

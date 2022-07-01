@@ -9,12 +9,13 @@
 		SELECT * FROM blog_post ORDER BY id desc LIMIT 1
 	]]>
 	</select>
-	
-	<select id="findId" parameterType="int" resultType="com.coding.entity.BlogPost">
+
+	<select id="findId" parameterType="int"
+		resultType="com.coding.entity.BlogPost">
 	<![CDATA[
 		select * from blog_post where id = #{id};
 	]]>
-	
+
 	</select>
 	<select id="selectAll" resultType="com.coding.entity.BlogPost">
 	<![CDATA[
@@ -25,12 +26,12 @@
 	<![CDATA[
 		insert into blog_post (title, article, author_id, featured, enabled, comments_enabled, views) 
 		values (#{title}, #{article}, #{authorId}, 1, 1, 0, 0)
-	]]>	
+	]]>
 	</insert>
 	<update id="update" parameterType="com.coding.entity.BlogPost">
 	<![CDATA[
 		update blog_set title=#{title}, article=#{article}, author_id=#{authorId};
-	]]>	
+	]]>
 	</update>
 	<delete id="delete" parameterType="int">
 	<![CDATA[

@@ -69,4 +69,14 @@ public class BlogWebServices {
 	public BlogPost getRecentPost() {
 		return postdao.findRecent();
 	}
+
+	public String getAuthorName(Integer authorId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public String[] getTagsBy(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

@@ -66,6 +66,8 @@ public class DispatcherServlet extends HttpServlet {
 			}
 		}else {
 			response.sendRedirect(request.getContextPath());
+//			String html = TemplateFactory.viewResolve("fanadesh/index", null);
+//			response.getWriter().append(html);
 		}
 
 	}

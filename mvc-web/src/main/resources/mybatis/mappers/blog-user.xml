@@ -15,25 +15,28 @@
 		select * from blog_user order by id;
 	]]>
 	</select>
-	
-	<select id="findId" parameterType="int" resultType="com.coding.entity.BlogUser">
+
+	<select id="findId" parameterType="int"
+		resultType="com.coding.entity.BlogUser">
 	<![CDATA[
 		select * from blog_user where id = #{id};
 	]]>
 	</select>
 
-	<insert id="insertUser" parameterType="com.coding.entity.BLogUser">
+	<insert id="insertUser"
+		parameterType="com.coding.entity.BLogUser">
 	<![CDATA[
 		insert into blog_user (name, email) values (#{name}, #{email});
 	]]>
 	</insert>
-	
-	<update id="updateUser" parameterType="com.coding.entity.BLogUser">
+
+	<update id="updateUser"
+		parameterType="com.coding.entity.BLogUser">
 	<![CDATA[
 		update blog_user set name=#{name}, email=#{email} where id=#{id};
 	]]>
 	</update>
-	
+
 	<delete id="deleteUser" parameterType="int">
 	<![CDATA[
 		delete from blog_user where id=#{id};
