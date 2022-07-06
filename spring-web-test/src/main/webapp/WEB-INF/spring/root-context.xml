@@ -22,6 +22,7 @@
 	-->
 	
 	<bean id="logAdvice" class="com.theplayer.kits.advice.LogAdvice"></bean>
+	<bean id="servletContext" class="com.theplayer.kits.ServletContextParam"></bean>
 
 <aop:config>
 <aop:pointcut id="allPointcut"

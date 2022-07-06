@@ -1,6 +1,7 @@
 package com.theplayer.kits;
 
 import java.util.Arrays;
+import java.util.Enumeration;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -20,15 +21,15 @@ import org.springframework.web.context.support.XmlWebApplicationContext;
  * @author bitcamp
  *
  */
-@Deprecated
-public class KitsWebApplicationInitializr /*implements WebApplicationInitializer*/{
-	@Autowired
-	private ApplicationContext context;
-
+//@Deprecated
+public class KitsWebApplicationInitializr implements WebApplicationInitializer{
+//	@Autowired
+//	private ApplicationContext context;
+//	
 //	@Override
-	public void onStartup(ServletContext servletContext) throws ServletException {
-		System.out.println("KitsWebApplicationInitializr:onStartup");
-		System.out.println("AppContext : "+context);
+//	public void deprecated_onStartup(ServletContext servletContext) throws ServletException {
+//		System.out.println("KitsWebApplicationInitializr:onStartup");
+//		System.out.println("AppContext : "+context);
 //		// TODO: read parameter in Servlet Context by web.xml
 //		String configLocation = servletContext.getInitParameter("contextConfigLocation");
 //		System.out.println(configLocation);
@@ -52,22 +53,35 @@ public class KitsWebApplicationInitializr /*implements WebApplicationInitializer
 //			System.out.println(e.getMessage());
 //		}
 //		
-		try {
-			System.out.println("WebPath---");
+//		try {
+//			System.out.println("WebPath---");
 //			WebApplicationContext webContext = new XmlWebApplicationContext();
 //			XmlWebApplicationContext webXmlContext = (XmlWebApplicationContext)webContext;
 //			Arrays.stream(webXmlContext.getConfigLocations()).forEach(s->System.out.println(s));
-	
-			WebApplicationContext webappContext = 
-					WebApplicationContextUtils.getWebApplicationContext(servletContext);
-			XmlWebApplicationContext webappXmlContext = 
-					(XmlWebApplicationContext)webappContext;
-			
-			Arrays.stream(webappXmlContext.getConfigLocations()).forEach(s->System.out.println(s));
-			Arrays.stream(webappXmlContext.getBeanDefinitionNames()).forEach(s->System.out.println(s));
-		}catch(Exception e) {
-			System.out.println(e.getMessage());
-		}
+//	
+//			WebApplicationContext webappContext = 
+//					WebApplicationContextUtils.getWebApplicationContext(servletContext);
+//			XmlWebApplicationContext webappXmlContext = 
+//					(XmlWebApplicationContext)webappContext;
+//			
+//			Arrays.stream(webappXmlContext.getConfigLocations()).forEach(s->System.out.println(s));
+//			Arrays.stream(webappXmlContext.getBeanDefinitionNames()).forEach(s->System.out.println(s));
+//		}catch(Exception e) {
+//			System.out.println(e.getMessage());
+//		}
+//		
+//	}
+
+	@Override
+	public void onStartup(ServletContext servletContext) throws ServletException {
+		// TODO Auto-generated method stub
+		Enumeration<String> names = servletContext.getInitParameterNames();
+//		servletContext.getInitParameter("uploadPath");
+		String uploadPath = servletContext.getRealPath(
+				servletContext.getInitParameter("uploadPath")
+		);
+		System.out.println(uploadPath);
+		ServletContextParam env = new ServletContextParam(uploadPath);
 		
 	}
 
