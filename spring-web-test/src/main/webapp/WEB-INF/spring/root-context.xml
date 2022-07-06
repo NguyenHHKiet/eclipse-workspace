@@ -1,0 +1,45 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+<!-- create instance of class -->
+	<bean id="dummy" class="com.theplayer.kits.test.Dummy"></bean>
+	<bean id="tvan" class="com.theplayer.kits.deprecated.ThinhVan"></bean>
+	<bean id="dvan" class="com.theplayer.kits.deprecated.DinhVan"></bean>
+	<bean id="ly" class="com.theplayer.kits.deprecated.AngryLy"></bean>
+	
+	<bean id="thay" class="com.theplayer.kits.deprecated.Thay">
+		<constructor-arg ref="tvan"></constructor-arg>
+		<property name="interpretor" ref="ly"></property>
+	</bean>
+	<!-- id 중복 불가 
+	<bean id="thay" class="com.theplayer.kits.deprecated.Thay">
+		<property name="interpretor" ref="ly"></property>
+	</bean>
+	-->
+	
+	<bean id="logAdvice" class="com.theplayer.kits.advice.LogAdvice"></bean>
+
+<aop:config>
+<aop:pointcut id="allPointcut"
+expression="execution(* com.theplayer.kits..*.*(..))" />
+
+<aop:aspect ref="logAdvice">
+	<aop:before method="printLog" 
+		pointcut-ref="allPointcut"/>
+</aop:aspect>
+
+</aop:config>
+
+
+
+<!-- 
+	<context:component-scan base-package="com.theplayer.kits">
+		<context:exclude-filter type="annotation" expression="Controller" />
+	</context:component-scan>
+ -->
+
+</beans>
