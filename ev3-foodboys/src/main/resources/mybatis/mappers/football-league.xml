@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- authot: Phuong -->
+<mapper namespace="foodboys.league">
+
+	<select id="selectList" resultType="com.theplayer.kits.foodboys.vo.League">
+	<![CDATA[
+		SELECT * FROM league
+	]]>
+	</select>
+	
+	<insert id="insert" parameterType="com.theplayer.kits.foodboys.vo.League">
+	<![CDATA[
+		insert into league (league_name, nation_id) 
+		values (#{league_name}, #{nation_id})
+	]]>	
+	</insert>
+	
+	<select id="selectOne" parameterType="com.theplayer.kits.foodboys.vo.League" resultType="com.theplayer.kits.foodboys.vo.League">
+	<![CDATA[
+		SELECT * FROM league ORDER BY league_id desc LIMIT 1
+	]]>
+	</select>
+	
+	<update id="update" parameterType="com.theplayer.kits.foodboys.vo.League">
+	<![CDATA[
+		update league set league_name = #{league_name} where league_id = #{league_id}
+	]]>
+	</update>
+	
+	<select id="find" resultType="com.theplayer.kits.foodboys.vo.League">
+	<![CDATA[
+		
+	]]>
+	</select>
+	
+</mapper>	

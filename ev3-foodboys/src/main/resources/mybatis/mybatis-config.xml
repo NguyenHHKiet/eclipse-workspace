@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- authot: Hung -->
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.theplayer.kits.foodboys.vo.User" alias="User" />
+		<typeAlias type="com.theplayer.kits.foodboys.vo.Team" alias="Team" />
+		<typeAlias type="com.theplayer.kits.foodboys.vo.Player" alias="Player" />
+		<typeAlias type="com.theplayer.kits.foodboys.vo.Matches" alias="Matches" />
+		<typeAlias type="com.theplayer.kits.foodboys.vo.League" alias="League" />
+		<typeAlias type="com.theplayer.kits.foodboys.vo.Manager" alias="Manager" />
+		<typeAlias type="com.theplayer.kits.foodboys.vo.Achievement" alias="Achievement" />
+	</typeAliases>
+
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC"/>
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+				<property name="url" value="jdbc:mysql://192.168.88.94/foodboys"/>
+				<property name="username" value="foodboys"/>
+				<property name="password" value="coka2500@quan4"/>
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<mappers>
+		<mapper resource="mybatis/mappers/football-user.xml"/>
+		<mapper resource="mybatis/mappers/football-team.xml"/>
+		<mapper resource="mybatis/mappers/football-player.xml"/>
+		<mapper resource="mybatis/mappers/football-matches.xml"/>
+		<mapper resource="mybatis/mappers/football-league.xml"/>
+		<mapper resource="mybatis/mappers/football-manager.xml"/>
+		<mapper resource="mybatis/mappers/football-achievement.xml"/>
+	</mappers>
+
+</configuration>

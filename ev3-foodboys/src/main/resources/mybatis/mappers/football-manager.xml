@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- authot: Hung -->
+<mapper namespace="foodboys.manager">
+
+	<select id="selectList" resultType="com.theplayer.kits.foodboys.vo.Manager">
+	<![CDATA[
+		SELECT * FROM manager where manager_status = TRUE
+	]]>
+	</select>
+	
+	<insert id="insert" parameterType="com.theplayer.kits.foodboys.vo.Manager">
+	<![CDATA[
+		insert into manager (manager_name, nation_id) 
+		values (#{manager_name}, #{nation_id})
+	]]>	
+	</insert>
+	
+	<select id="selectOne" parameterType="com.theplayer.kits.foodboys.vo.Manager" resultType="com.theplayer.kits.foodboys.vo.Manager">
+	<![CDATA[
+		SELECT * FROM manager ORDER BY manager_id desc LIMIT 1
+	]]>
+	</select>
+	
+	<update id="update" parameterType="com.theplayer.kits.foodboys.vo.Manager">
+	<![CDATA[
+		update manager set manager_name = #{manager_name} where manager_id = #{manager_id}
+	]]>
+	</update>
+	
+	<select id="find" resultType="com.theplayer.kits.foodboys.vo.Manager">
+	<![CDATA[
+		
+	]]>
+	</select>
+	
+	<select id="findManagerName" resultType="com.theplayer.kits.foodboys.vo.Manager">
+	<![CDATA[
+		SELECT * FROM manager where manager_name = #{manager_name}
+	]]>
+	</select>
+	
+</mapper>	
