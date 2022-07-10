@@ -31,4 +31,9 @@ public class HibernateUtils {
 		
 		factory = config.buildSessionFactory(registry);
 	}
+
+	public static Object getFactory() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
