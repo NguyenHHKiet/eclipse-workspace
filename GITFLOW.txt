@@ -1,0 +1,12 @@
+	github - private
+	1 can't manage branch
+	2 all member can write and push
+
+	Phan chia work theo package 
+	Khi ban gap loi thi tao branch moi
+	Sau khi merga, xong work thi xoa cai branch do di
+	on. master: status luc nao cung clean moi luc co the build moi luc
+		develop: status ko dc co error
+			crew: phai update cho dev
+	
+	<> Khi merga nen merga cung nhau, khi xuat hien error thi giai quyet cung nhau thi se de hon.
