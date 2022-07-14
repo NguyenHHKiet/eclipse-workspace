@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./script.js">
+</head>
+
+<body>
+
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <h4>Search Line Name</h4>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+    <table id="myTable">
+        <tr class="header">
+            <th style="width:60%;">Name</th>
+            <th style="width:40%;">Country</th>
+        </tr>
+        <tr>
+            <td>Alfreds Futterkiste</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Berglunds snabbkop</td>
+            <td>Sweden</td>
+        </tr>
+        <tr>
+            <td>Island Trading</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Koniglich Essen</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>Laughing Bacchus Winecellars</td>
+            <td>Canada</td>
+        </tr>
+        <tr>
+            <td>Magazzini Alimentari Riuniti</td>
+            <td>Italy</td>
+        </tr>
+        <tr>
+            <td>North/South</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Paris specialites</td>
+            <td>France</td>
+        </tr>
+    </table>
+    <form action="/action_page.php">
+        <fieldset>
+            <legend>Personalia:</legend>
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="birthday">Birthday:</label>
+            <input type="date" id="birthday" name="birthday"><br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+    <div style="padding-left:16px">
+        <h2>Responsive Search Bar</h2>
+        <p>Navigation bar with a search box and a submit button inside of it.</p>
+        <p>Resize the browser window to see the responsive effect.</p>
+    </div>
+
+    <section>
+        <h1>The animation-delay Property</h1>
+
+        <p>Start the animation after 2 seconds:</p>
+        <div id="mac">Hello World</div>
+
+        <p>Here is a quote from WWF's website:</p>
+        <blockquote cite="http://www.worldwildlife.org/who/index.html">
+            For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization,
+            WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5
+            million globally.
+        </blockquote>
+
+        <h2>border-collapse: separate</h2>
+        <p>When using "border-collapse: separate", the border-spacing property can be used to set the space between the
+            cells:</p>
+        <table id="table1">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+            </tr>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+            </tr>
+            <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+            </tr>
+        </table>
+
+        <h2>border-collapse: collapse</h2>
+        <p>When using "border-collapse: collapse", the border-spacing property has no effect:</p>
+        <table id="table2">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+            </tr>
+            <tr>
+                <td>Peter</td>
+                <td>Griffin</td>
+            </tr>
+            <tr>
+                <td>Lois</td>
+                <td>Griffin</td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- Javascript -->
+    <!-- 
+        1. var : gan lai, khai bao lai, pham vi ham, tao thuoc tinh toan cuc
+            ko co : pham vi khoi
+
+        2. let : gan lai, pham vi ham, pham vi khoi
+            ko co : khai bao lai, tao thuoc tinh toan cuc
+
+        3. const : pham vi ham, pham vi khoi
+            ko co : gan lai, khai bao lai, tao thuoc tinh toan cuc
+     -->
+    <!--  -->
+    <div id="dc" style="background-color: green; width: 200px; height: 200px;">
+        OnClick
+    </div>
+
+
+
+
+
+
+
+    <script>
+        todo()
+        function todo() {
+            console.log('ko')
+        };
+
+        (() => { console.log('lamda') })();
+
+        ((m) => { console.log(m) })('update');
+
+        function fun() { //function scope
+            name = 'honagkiet'
+        };
+        console.log(name);
+
+        function tap() { //function scope
+            taop = 'ht'
+        };
+        tap();
+        console.log(taop);
+
+
+        let ol = {
+            id: 01,
+            name: 'HoangKiet',
+            email: 'nhoangkiet35@gmail.com'
+        };
+        console.log(ol);
+
+        //Khuyen khich du sung return
+        function person() {
+            return {
+                id: 12,
+                name: 'das',
+                email: 'hk@hk.com',
+            };
+        };
+        const p = new person();
+        console.log(p);
+        console.log(p.id);
+
+        // get elements
+        const d = document.getElementsByTagName('div');
+        console.log(d);
+        console.log(d.length);
+
+        const d2 = document.getElementById('mac');
+        console.log(d2);
+
+        const d3 = document.getSelection('div');
+        const d4 = document.getSelection('.search-container');
+        console.log(d3);
+        console.log(d4);
+
+
+        //Khuyen khich du sung Listener
+        function warn() {
+            console.log('Warnning Log')
+        }
+        const dc = document.getElementById('dc');
+        dc.addEventListener('click', warn);
+
+        // event keyboard
+        const box = document.getElementById('dc');
+        document.addEventListener('keydown', function (e) {
+            let x = Number(box.style['top'].replace("px", ""));
+            let y = Number(box.style['left'].replace("px", ""));
+            switch (e.keyCode) {
+                case 37: x -= 4;
+                    break;
+                case 38: x -= 4;
+                    break;
+                case 39: x -= 4;
+                    break;
+                case 40: x -= 4;
+                    break;
+            }
+            (box.style['top']);
+        });
+
+
+
+
+
+
+
+
+
+
+        function myFunction() {
+            // Declare variables
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

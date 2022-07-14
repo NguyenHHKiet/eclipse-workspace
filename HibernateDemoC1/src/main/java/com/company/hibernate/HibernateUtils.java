@@ -9,6 +9,8 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
 import org.hibernate.service.ServiceRegistry;
 
+import com.hk.pojo.Product;
+
 public class HibernateUtils {
 
 	private static final SessionFactory factory;
@@ -32,8 +34,8 @@ public class HibernateUtils {
 		factory = config.buildSessionFactory(registry);
 	}
 
-	public static Object getFactory() {
+	public static SessionFactory getFactory() {
 		// TODO Auto-generated method stub
-		return null;
+		return factory;
 	}
 }

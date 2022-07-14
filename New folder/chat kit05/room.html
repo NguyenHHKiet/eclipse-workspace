@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room-WebChat</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+        div, header, section, footer {
+            /* border: 1px dashed #333333; */
+            width: 98%;
+        }
+        .container-row {
+            display: flex;
+            flex-direction: row;
+        }
+        .container-col {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            height: 100%;
+        }
+        .container-row > .item:nth-child(1) { flex: 10; }
+        .container-row > .item:nth-child(2) { flex: 2; border-left: 2px solid #330033;}
+        .container-col > .item:nth-child(1) { flex: 1; }
+        .container-col > .item:nth-child(2) { flex: 10; }
+        .container-col > .item:nth-child(3) { flex: 1; }
+
+        .item {
+            padding: 8px;
+        }
+        footer input {
+            width: 98%;
+            font-size: 12pt;
+            line-height: 24px;
+        }
+        header, footer {
+            background-color: #330033;
+            color : #cdcdcd;
+        }
+        section {
+            background-color: #cccccc;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container-col">
+
+        <header class="item"><h3>LOGO</h3></header>
+        <section class="item container-row">
+            <div class="item" id="chatarea"><h3>대화목록</h3></div>
+            <div class="item"><h3>접속자</h3></div>
+        </section>
+        <footer class="item container-row">
+            <div class="item"><input type="text" id="message" name="message"></div>
+            <div class="item">
+                <button id="sendBtn">보내기</button>
+                <button id="menuBtn">설정</button>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+
+    window.addEventListener('load', function(){
+        const socket = bindSocket();
+        console.log(socket);
+        // 수신 이벤트 핸들러 등록
+        socket.onmessage = function(event) {
+            console.log('socket : onmessage');
+            // console.log( event.data );
+            // console.log( JSON.parse(event.data) );
+            const obj = JSON.parse(event.data);
+            console.log(obj);
+            if( obj.action === 'chat' ){
+                const chatarea = document.querySelector('#chatarea');
+                const p = document.createElement('p');
+                p.className = 'rcv-text';
+                p.innerHTML += `${obj.userid} : ${obj.payload}`;
+                chatarea.appendChild(p); 
+            }
+        };
+
+        // Cookie 읽기 : _ga=GA1.1.1096180121.1634528777; userid=julian
+        const userid = getCookie('userid');
+
+        const chatarea = document.querySelector('#chatarea');
+        const text = document.querySelector('#message');
+        text.addEventListener('keypress', function(e){
+            // input 에 키보드 입력할 때마다 발생
+            if(e.keyCode==13) {
+                const data = {
+                    userid : userid,
+                    action : 'chat',
+                    payload : text.value
+                }
+                socket.send(JSON.stringify(data));
+                text.value = '';
+            }
+        });
+        const sendBtn = document.querySelector('#sendBtn');
+        sendBtn.addEventListener('click', function(){
+            const data = {
+                userid : userid,
+                action : 'chat',
+                payload : text.value
+            }
+            socket.send(JSON.stringify(data));
+            text.value = '';
+        });
+
+        const aside = document.querySelector('#aside');
+
+    });
+    //////
+    function bindSocket(){
+        const url = 'demo.piesocket.com';
+        const params = '/v3/channel_1?api_key=VCXCEuvhGcBDP7XhiJJUDvR1e1D3eiVjgZ9VRiaV&notify_self';
+        const socket = new WebSocket(`ws://${url}/${params}`);
+        socket.onclose = function () {
+            console.log('socket : closed');
+        };
+        socket.onopen = function() {
+            console.log('socket : opened');
+            socket.send('{"message":"Hi there"}');
+        };
+
+        return socket;
+    }
+    wss://demo.piesocket.com/v3/channel_1?api_key=VCXCEuvhGcBDP7XhiJJUDvR1e1D3eiVjgZ9VRiaV&notify_self
+    ////
+    //  쿠키에 접근하는 가장 짧은 방법은 정규 표현식(regular expression) 을 사용하는 것입니다.
+    //  see @ https://ko.javascript.info/regular-expressions
+    //  아래 getCookie(name) 함수는 주어진 name의 쿠키 값을 반환합니다.
+    // 조건에 맞는 쿠키가 없다면 undefined를 반환합니다.
+    function getCookie(name) {
+        let matches = document.cookie.match(new RegExp(
+            "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        ));
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+
+    </script>
+</body>
+</html>

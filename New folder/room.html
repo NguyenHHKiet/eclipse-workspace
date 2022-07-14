@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROOM</title>
+    <style>
+        * {
+            background-origin: padding-box;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: large;
+            margin: 2px;
+            padding: 2px;
+            border-radius: 8px 8px 8px 8px;
+        }
+
+        header,
+        section,
+        footer {
+            height: 100%;
+            box-sizing: border-box;
+            border: 5px solid orange;
+        }
+
+        section {
+            width: 100%;
+        }
+
+        .container {
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container .row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .container .col {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            height: 100%;
+        }
+
+        .content {
+            background-color: antiquewhite;
+            text-align: center;
+        }
+
+        textarea {
+            white-space: nowrap;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            position: static;
+            resize: none;
+        }
+
+        .item input,
+        button {
+            width: 100%;
+        }
+
+        .row>.item:nth-child(1) {
+            flex: 10;
+        }
+
+        .row>.item:nth-child(2) {
+            flex: 2;
+        }
+
+        .col>.item:nth-child(1) {
+            flex: 1;
+        }
+
+        .col>.item:nth-child(2) {
+            flex: 10;
+        }
+
+        .col>.item:nth-child(3) {
+            flex: 1;
+        }
+
+        .msg-text {
+            background-color: blanchedalmond;
+            color: brown;
+        }
+
+        video {
+            height: 300px;
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body class="container">
+    <div id="outer" class="content col">
+        <header class="item">Kits chat Room {} menu ....</header>
+        <section id="abo" class="item row">
+            <div class="item">
+                <Textarea id="chatarea">Text</Textarea>
+            </div>
+            <div class="item">
+                Partical
+            </div>
+        </section>
+        <footer class="item row">
+            <div class="item">
+                <input type="text" id="message" name="message">
+                <div id="ketqua"></div>
+            </div>
+            <div class="item">
+                <button id="sendBtn" type="submit" value="send">send</button>
+                <button id="myBtn">Click vào đây</button>
+            </div>
+        </footer>
+        <h2>JavaScript Validation</h2>
+
+        <p>Enter a number and click OK:</p>
+
+        <input id="id1" type="number" min="100" max="300" required>
+        <button onclick="myFunction()">OK</button>
+
+        <p>If the number is less than 100 or greater than 300, an error message will be displayed.</p>
+
+        <p id="demo"></p>
+        <div id="msg">Hom nay chung ta an gi?</div>
+
+
+    </div>
+
+    <script type="module">
+        //client api socket.io
+
+
+        //initialize when loaded
+        window.addEventListener('load', function () {
+            const socket = bindSocket();
+            console.log(socket);
+            // 수신 이벤트 핸들러 등록
+            socket.onmessage = function (event) {
+                console.log('socket : onmessage');
+                // console.log( event.data );
+                // console.log( JSON.parse(event.data) );
+                const obj = JSON.parse(event.data);
+                console.log(obj);
+                if (obj.action === 'chat') {
+                    const chatarea = document.querySelector('#chatarea');
+                    const p = document.createElement('p');
+                    p.className = 'rcv-text';
+                    p.innerHTML += `${obj.userid} : ${obj.payload}`;
+                    chatarea.appendChild(p);
+                }
+            };
+
+            // Cookie 읽기 : _ga=GA1.1.1096180121.1634528777; userid=julian
+            const userid = getCookie('userid');
+
+            const chatarea = document.querySelector('#chatarea');
+            const text = document.querySelector('#message');
+            text.addEventListener('keypress', function (e) {
+                // input 에 키보드 입력할 때마다 발생
+                if (e.keyCode == 13) {
+                    const data = {
+                        userid: userid,
+                        action: 'chat',
+                        payload: text.value
+                    }
+                    socket.send(JSON.stringify(data));
+                    text.value = '';
+                }
+            });
+            const sendBtn = document.querySelector('#sendBtn');
+            sendBtn.addEventListener('click', function () {
+                const data = {
+                    userid: userid,
+                    action: 'chat',
+                    payload: text.value
+                }
+                socket.send(JSON.stringify(data));
+                text.value = '';
+            });
+
+            const aside = document.querySelector('#aside');
+
+        });
+        //////
+        function bindSocket() {
+            const url = 'demo.piesocket.com';
+            const params = '/v3/channel_1?api_key=VCXCEuvhGcBDP7XhiJJUDvR1e1D3eiVjgZ9VRiaV&notify_self';
+            const socket = new WebSocket(`ws://${url}/${params}`);
+            socket.onclose = function () {
+                console.log('socket : closed');
+            };
+            socket.onopen = function () {
+                console.log('socket : opened');
+                socket.send('{"message":"Hi there"}');
+            };
+
+            return socket;
+        }
+        wss://demo.piesocket.com/v3/channel_1?api_key=VCXCEuvhGcBDP7XhiJJUDvR1e1D3eiVjgZ9VRiaV&notify_self
+        ////
+        //  쿠키에 접근하는 가장 짧은 방법은 정규 표현식(regular expression) 을 사용하는 것입니다.
+        //  see @ https://ko.javascript.info/regular-expressions
+        //  아래 getCookie(name) 함수는 주어진 name의 쿠키 값을 반환합니다.
+        // 조건에 맞는 쿠키가 없다면 undefined를 반환합니다.
+        function getCookie(name) {
+            let matches = document.cookie.match(new RegExp(
+                "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+            ));
+            return matches ? decodeURIComponent(matches[1]) : undefined;
+        }
+
+
+
+
+
+        //JSON is string (text)
+        const jobj = {
+            title: 'js is hell',
+            page: 10,
+            price: 1000.90
+        }
+        const jstr = JSON.stringify(jobj);
+        const jsonObj = JSON.parse(jstr);
+        console.log(jsonObj);
+        //javascript's value & jquery's value
+        const msgbox = document.getElementById('msg');
+        msgbox.innerText = jstr;
+
+        function myFunction() {
+            const inpObj = document.getElementById("id1");
+            if (!inpObj.checkValidity()) {
+                document.getElementById("demo").innerHTML = inpObj.validationMessage;
+            } else {
+                document.getElementById("demo").innerHTML = "Input OK";
+            }
+        }
+
+        function hamDauTien() {
+            alert("Hàm đầu tiên thực thi thành công!");
+        }
+
+        function hamThuHai() {
+            alert("Hàm thứ hai thực thi thành công!");
+        }
+
+        // Nhắm đến phần tử myBtn
+        var btn = document.getElementById("myBtn");
+
+        // Gán Event Listener cho phần tử button
+        btn.addEventListener("click", xinChao);
+        btn.addEventListener("click", hamDauTien);
+        btn.addEventListener("click", hamThuHai);
+        btn.addEventListener("mouseover", thietLapMauHover);
+        btn.addEventListener("mouseout", thietLapMauBinhThuong);
+        window.addEventListener("resize", hienThiKichThuocCuaSo);
+
+        function xinChao() {
+            alert("Xin chao, Hom nay chung ta an gi?");
+        }
+        function thietLapMauHover() {
+            btn.style.background = "yellow";
+        }
+        function thietLapMauBinhThuong() {
+            btn.style.background = "";
+        }
+        //them addeventlistener vao windown
+        function hienThiKichThuocCuaSo() {
+            var w = window.innerWidth;
+            var h = window.innerHeight;
+            var kichThuoc = "Rong: " + w + ", Cao: " + h;
+            document.getElementById("ketqua").innerHTML = kichThuoc;
+        }
+
+
+
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
