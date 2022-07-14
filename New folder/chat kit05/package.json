@@ -11,5 +11,11 @@
     "url": "new folder"
   },
   "author": "HoangKiet",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "socket.io": "^4.5.1",
+    "websocket": "^1.0.34",
+    "ws": "^8.8.0"
+  }
 }

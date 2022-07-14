@@ -1,191 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Room-WebChat</title>
+
+    <!-- Room style -->
     <style>
         * {
-            margin: 0 auto;
+            margin: 0;
             padding: 0;
         }
-        div, header, section, footer {
-            /* border: 1px dashed #333333; */
-            width: 98%;
-        }
-        .container-row {
-            display: flex;
-            flex-direction: row;
-        }
-        .container-col {
-            display: flex;
-            flex-direction: column;
-            position: absolute;
-            height: 100%;
-        }
-        .container-row > .item:nth-child(1) { flex: 10; }
-        .container-row > .item:nth-child(2) { flex: 2; border-left: 2px solid #330033;}
-        .container-col > .item:nth-child(1) { flex: 1; }
-        .container-col > .item:nth-child(2) { flex: 10; }
-        .container-col > .item:nth-child(3) { flex: 1; }
 
-        .item {
+        header {
+            width: 100%;
+            background-color: #000000;
+            color: #FFFFFF;
             padding: 8px;
         }
-        footer input {
-            width: 98%;
-            font-size: 12pt;
-            line-height: 24px;
-        }
-        header, footer {
-            background-color: #330033;
-            color : #cdcdcd;
-        }
-        section {
-            background-color: #cccccc;
+
+        footer {
+            text-align: center;
+            width: 100%;
+            background-color: #333333;
+            color: #FFFFFF;
+            padding: 8px;
         }
 
+        footer input {
+            position: relative;
+            width: 86%;
+            line-height: 24pt;
+        }
+
+        section {
+            position: relative;
+            float: left;
+            width: 80%;
+            height: 780px;
+            overflow: auto;
+        }
+
+        aside {
+            position: relative;
+            float: left;
+            width: 20%;
+            height: 780px;
+            overflow: auto;
+        }
+
+        p {
+            border-bottom: 1px dashed #666666;
+        }
     </style>
 </head>
+
 <body>
-
-    <div class="container-col">
-
-        <header class="item"><h3>LOGO</h3></header>
-        <section class="item container-row">
-            <div class="item" id="chatarea"><h3>대화목록</h3></div>
-            <div class="item"><h3>접속자</h3><div id="aside"></div></div>
+    <!-- 채팅방 접속 시 서버로부터 받은 cookie 에 nickname 이 있다.   -->
+    <header>
+        <div style="width: 64px; height: 24px;">LOGO</div>
+        <span>ROOM : </span><span id="roomname"></span>
+    </header>
+    <div class="" style="height: 800px;">
+        <section>
+            <h3>대화목록</h3>
         </section>
-        <footer class="item container-row">
-            <div class="item"><input type="text" id="message" name="message" placeholder="message..."></div>
-            <div class="item">
-                <button id="sendBtn">보내기</button>
-                <button id="menuBtn">설정</button>
-            </div>
-        </footer>
-
+        <aside>
+            <h3>접속자 <button id="refreshBtn">새로고침</button></h3>
+        </aside>
+        <div style="clear:both; display: none;"></div>
     </div>
+    <footer>
+        <input type="text" id="message" name="willam" placeholder="message..">
+        <button id="sendBtn">보내기</button>
+    </footer>
 
+    <!-- socket.io  -->
+    <script src="/socket.io/socket.io.js"></script>
     <script>
-
-    window.addEventListener('load', function(){
-        // connect(open)
-        const socket = bindSocket();
-        console.log(socket);
-        // 수신 이벤트(event) 핸들러(handler) 등록
-        socket.onmessage = function(event) {
-            console.log('socket : onmessage');
-            // json string -> object
-            const obj = JSON.parse(event.data);
-            console.log(obj);
-            if( obj.action === 'chat' ){
-                const chatarea = document.querySelector('#chatarea');
-                const p = document.createElement('p');
-                p.innerHTML += `${obj.userid} : ${obj.payload}`;
-                chatarea.appendChild(p); 
-                // chatarea.scrollTop = chatarea.scrollHeight;
+        let socket;
+        var nickname = '';
+        function getCookie(name) {
+            let matches = document.cookie.match(new RegExp(
+                "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+            ));
+            return matches ? decodeURIComponent(matches[1]) : undefined;
+        }
+        function clearAllCookies(domain, path) {
+            var doc = document,
+                domain = domain || doc.domain,
+                path = path || '/',
+                cookies = doc.cookie.split(';'),
+                now = +(new Date);
+            for (var i = cookies.length - 1; i >= 0; i--) {
+                doc.cookie = cookies[i].split('=')[0] + '=; expires=' + now + '; domain=' + domain + '; path=' + path;
             }
-        };
+        }
 
-        // Cookie 읽기 : _ga=GA1.1.1096180121.1634528777; userid=julian
-        const userid = getCookie('userid');// it's me
+        // 페이지 로드 이벤트
+        window.addEventListener('load', function () {
+            sessionStorage.setItem('nickname', getCookie('nickname'));
+            sessionStorage.setItem('roomname', getCookie('roomname'));
+            clearAllCookies('localhost', '/');
 
-        const chatarea = document.querySelector('#chatarea');
-        const text = document.querySelector('#message');
-        text.addEventListener('keypress', function(e){
-            // input 에 키보드(keyboard) 입력할 때마다 발생
-            if(e.keyCode==13) {
-                const data = {
-                    userid : userid,
-                    action : 'chat',
-                    payload : text.value
+            document.querySelector('#message').name = sessionStorage.getItem('nickname');
+            document.querySelector('#roomname').innerHTML = sessionStorage.getItem('roomname');
+
+            socket = io('/' + sessionStorage.getItem('roomname'));
+            socket.on('updateMessage', function (data) {
+                const p = document.createElement('p');
+                p.innerHTML = data.nickname + ': ' + data.msg;
+                section.appendChild(p);
+                section.scrollTop = section.scrollHeight;
+            });
+            socket.on('updateMember', function (data) {
+                const childs = document.querySelectorAll('aside > p');
+                childs.forEach(p => {
+                    p.parentNode.removeChild(p);
+                });
+                data.forEach(element => {
+                    const p = document.createElement('p');
+                    p.innerHTML = element;
+                    aside.appendChild(p);
+                });
+            });
+
+        });
+        // 브라우저 창 종료 전 이벤트
+        window.addEventListener('beforeunload', function () {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', '/api/out?roomname=' + sessionStorage.getItem('roomname') + '&' + 'nickname=' + sessionStorage.getItem('nickname'));
+            xhr.send();
+            xhr.onreadystatechange = function (data) {
+                if (xhr.readyState == 4 && xhr.status == 200) {
                 }
-                // object --> string(JSON)
-                socket.send(JSON.stringify(data));
+            }
+        });
+        // 브라우저 창 종료 이벤트
+        window.addEventListener('unload', function () { });
+
+        const section = document.querySelector('section');
+        const aside = document.querySelector('aside');
+        const text = document.querySelector('#message');
+        // 메세지 입력 시 enter 또는 button 클릭 시 socket event 발생
+        function sendMessage(data) {
+            socket.emit('sendMessage', data);
+        }
+        text.addEventListener('keypress', function (e) {
+            if (e.keyCode == 13) {
+                sendMessage({
+                    nickname: sessionStorage.getItem('nickname'),
+                    msg: text.value
+                });
                 text.value = '';
             }
         });
         const sendBtn = document.querySelector('#sendBtn');
-        sendBtn.addEventListener('click', function(){
-            const data = {
-                userid : userid,
-                action : 'chat',
-                payload : text.value
-            }
-            socket.send(JSON.stringify(data));
+        sendBtn.addEventListener('click', function () {
+            sendMessage({
+                nickname: sessionStorage.getItem('nickname'),
+                msg: text.value
+            });
             text.value = '';
         });
+        const refreshBtn = document.querySelector('#refreshBtn');
+        refreshBtn.addEventListener('click', function () {
+            const xhr = new XMLHttpRequest();
+            xhr.open('GET', '/api/nicklist?roomname=' + sessionStorage.getItem('roomname'));
+            xhr.send();
+            xhr.onreadystatechange = function (data) {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    const jsonObj = JSON.parse(xhr.responseText);
+                    console.log(jsonObj);
+                    const childs = document.querySelectorAll('aside > p');
+                    childs.forEach(p => {
+                        p.parentNode.removeChild(p);
+                    });
+                    jsonObj.nicklist.forEach(element => {
+                        const p = document.createElement('p');
+                        p.innerHTML = element;
+                        aside.appendChild(p);
+                    });
+                }
 
-        // 접속자 목록 갱신
-        refreshMemberList();
-        // 1초에 한 번씩 server 로 접속자 목록을 요청하여 갱신
-        const itid = setInterval(refreshMemberList,1000);
-        // clearInterval(itid);
-
-    });
-    //////
-    function bindSocket(){
-        const url = 'demo.piesocket.com';
-        const params = '/v3/channel_1?api_key=VCXCEuvhGcBDP7XhiJJUDvR1e1D3eiVjgZ9VRiaV&notify_self';
-        const socket = new WebSocket(`ws://${url}/${params}`);
-        socket.onclose = function () {
-            console.log('socket : closed');
-        };
-        socket.onopen = function() {
-            console.log('socket : opened');
-            socket.send('{"message":"Hi there"}');
-        };
-
-        return socket;
-    }
-    wss://
-    ////
-    //  Cookie에 접근하는 가장 짧은 방법은 정규 표현식(regular expression) 을 사용하는 것입니다.
-    //  see @ https://ko.javascript.info/regular-expressions
-    //  아래 getCookie(name) 함수는 주어진 name의 Cookie 값을 반환합니다.
-    // 조건에 맞는 Cookie가 없다면 undefined를 반환합니다.
-    function getCookie(name) {
-        let matches = document.cookie.match(new RegExp(
-            "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-        ));
-        return matches ? decodeURIComponent(matches[1]) : undefined;
-    }
-    // 접속자 목록 갱신을 위한 Ajax 요청
-    function refreshMemberList(){
-        const xhr = new XMLHttpRequest();// $.ajax
-        xhr.open('GET', '/api/nicklist');// java @RestController with @ResponseBody in Spring
-        // this is event driven 
-        xhr.onreadystatechange = function(data){
-            if( xhr.readyState == 0 ){}
-            if( xhr.readyState == 1 ){}
-            if( xhr.readyState == 2 ){}
-            if( xhr.readyState == 3 ){}
-            if( xhr.readyState == 4 && xhr.status == 200){
-                const jsonObj = JSON.parse(xhr.responseText);
-                console.log(jsonObj);
-                // const childs = document.querySelectorAll('#aside > p');
-                // // 중복 확인하지 않고 현재 목록을 모두 지움
-                // childs.forEach(p => {
-                //     p.parentNode.removeChild(p);
-                // });
-                //Quiz ? 
-                document.querySelector('#aside').innerHTML='';
-
-
-                // 서버(server)로부터 받은 접속자 목록 출력
-                jsonObj.forEach(element => {
-                    const p = document.createElement('p');
-                    p.innerHTML = `<span>${element.nickname}</span>`;
-                    aside.appendChild(p);   
-                });
             }
-        }
-        xhr.send(); // GET
-//        xhr.send(data); // POST
-    };
+        });
 
 
     </script>
 </body>
+
 </html>
