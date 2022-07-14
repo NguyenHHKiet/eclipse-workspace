@@ -1,0 +1,15 @@
+{
+  "name": "hoangkiet",
+  "version": "1.0.0",
+  "description": "demoC1 node.js",
+  "main": "node-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "new folder"
+  },
+  "author": "HoangKiet",
+  "license": "ISC"
+}

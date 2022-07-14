@@ -55,51 +55,53 @@
         <header class="item"><h3>LOGO</h3></header>
         <section class="item container-row">
             <div class="item" id="chatarea"><h3>대화목록</h3></div>
-            <div class="item"><h3>접속자</h3></div>
+            <div class="item"><h3>접속자</h3><div id="aside"></div></div>
         </section>
         <footer class="item container-row">
-            <div class="item"><input type="text" id="message" name="message"></div>
+            <div class="item"><input type="text" id="message" name="message" placeholder="message..."></div>
             <div class="item">
                 <button id="sendBtn">보내기</button>
                 <button id="menuBtn">설정</button>
             </div>
         </footer>
+
     </div>
 
     <script>
 
     window.addEventListener('load', function(){
+        // connect(open)
         const socket = bindSocket();
         console.log(socket);
-        // 수신 이벤트 핸들러 등록
+        // 수신 이벤트(event) 핸들러(handler) 등록
         socket.onmessage = function(event) {
             console.log('socket : onmessage');
-            // console.log( event.data );
-            // console.log( JSON.parse(event.data) );
+            // json string -> object
             const obj = JSON.parse(event.data);
             console.log(obj);
             if( obj.action === 'chat' ){
                 const chatarea = document.querySelector('#chatarea');
                 const p = document.createElement('p');
-                p.className = 'rcv-text';
                 p.innerHTML += `${obj.userid} : ${obj.payload}`;
                 chatarea.appendChild(p); 
+                // chatarea.scrollTop = chatarea.scrollHeight;
             }
         };
 
         // Cookie 읽기 : _ga=GA1.1.1096180121.1634528777; userid=julian
-        const userid = getCookie('userid');
+        const userid = getCookie('userid');// it's me
 
         const chatarea = document.querySelector('#chatarea');
         const text = document.querySelector('#message');
         text.addEventListener('keypress', function(e){
-            // input 에 키보드 입력할 때마다 발생
+            // input 에 키보드(keyboard) 입력할 때마다 발생
             if(e.keyCode==13) {
                 const data = {
                     userid : userid,
                     action : 'chat',
                     payload : text.value
                 }
+                // object --> string(JSON)
                 socket.send(JSON.stringify(data));
                 text.value = '';
             }
@@ -115,7 +117,11 @@
             text.value = '';
         });
 
-        const aside = document.querySelector('#aside');
+        // 접속자 목록 갱신
+        refreshMemberList();
+        // 1초에 한 번씩 server 로 접속자 목록을 요청하여 갱신
+        const itid = setInterval(refreshMemberList,1000);
+        // clearInterval(itid);
 
     });
     //////
@@ -133,18 +139,52 @@
 
         return socket;
     }
-    wss://demo.piesocket.com/v3/channel_1?api_key=VCXCEuvhGcBDP7XhiJJUDvR1e1D3eiVjgZ9VRiaV&notify_self
+    wss://
     ////
-    //  쿠키에 접근하는 가장 짧은 방법은 정규 표현식(regular expression) 을 사용하는 것입니다.
+    //  Cookie에 접근하는 가장 짧은 방법은 정규 표현식(regular expression) 을 사용하는 것입니다.
     //  see @ https://ko.javascript.info/regular-expressions
-    //  아래 getCookie(name) 함수는 주어진 name의 쿠키 값을 반환합니다.
-    // 조건에 맞는 쿠키가 없다면 undefined를 반환합니다.
+    //  아래 getCookie(name) 함수는 주어진 name의 Cookie 값을 반환합니다.
+    // 조건에 맞는 Cookie가 없다면 undefined를 반환합니다.
     function getCookie(name) {
         let matches = document.cookie.match(new RegExp(
             "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
         ));
         return matches ? decodeURIComponent(matches[1]) : undefined;
     }
+    // 접속자 목록 갱신을 위한 Ajax 요청
+    function refreshMemberList(){
+        const xhr = new XMLHttpRequest();// $.ajax
+        xhr.open('GET', '/api/nicklist');// java @RestController with @ResponseBody in Spring
+        // this is event driven 
+        xhr.onreadystatechange = function(data){
+            if( xhr.readyState == 0 ){}
+            if( xhr.readyState == 1 ){}
+            if( xhr.readyState == 2 ){}
+            if( xhr.readyState == 3 ){}
+            if( xhr.readyState == 4 && xhr.status == 200){
+                const jsonObj = JSON.parse(xhr.responseText);
+                console.log(jsonObj);
+                // const childs = document.querySelectorAll('#aside > p');
+                // // 중복 확인하지 않고 현재 목록을 모두 지움
+                // childs.forEach(p => {
+                //     p.parentNode.removeChild(p);
+                // });
+                //Quiz ? 
+                document.querySelector('#aside').innerHTML='';
+
+
+                // 서버(server)로부터 받은 접속자 목록 출력
+                jsonObj.forEach(element => {
+                    const p = document.createElement('p');
+                    p.innerHTML = `<span>${element.nickname}</span>`;
+                    aside.appendChild(p);   
+                });
+            }
+        }
+        xhr.send(); // GET
+//        xhr.send(data); // POST
+    };
+
 
     </script>
 </body>
