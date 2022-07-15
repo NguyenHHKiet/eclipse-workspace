@@ -1,97 +1,143 @@
 package com.hk.pojo;
 
 import java.io.Serializable;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlRootElement;
-
+import javax.persistence.*;
+import java.math.BigDecimal;
 import java.util.Date;
+import java.util.List;
 
 
+/**
+ * The persistent class for the product database table.
+ * 
+ */
 @Entity
-@Table(name = "product")
-@XmlRootElement
-@NamedQueries({
-	@NamedQuery(name = "Product.findAll", query = "select p from Product p"),
-	@NamedQuery(name = "Product.findById", query = "select p from Product p where p.id = :id"),
-	@NamedQuery(name = "Product.findByName", query = "select p from Product p where p.name = :name"),
-	@NamedQuery(name = "Product.findByDescription", query = "select p from Product p where p.description = :description")
-})
+@NamedQuery(name="Product.findAll", query="SELECT p FROM Product p")
 public class Product implements Serializable {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 4659472681175345851L;
+	private static final long serialVersionUID = 1L;
+
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private String name;
+
+	private Object active;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name="created_date")
+	private Date createdDate;
+
 	private String description;
-	private int price;
-	private String manufacturer;
+
 	private String image;
-	private Date created_date;
-	private int active;
-	private Category category_id;
-	public int getId() {
-		return id;
+
+	private String manufacturer;
+
+	private String name;
+
+	private BigDecimal price;
+
+	//bi-directional many-to-one association to OrderDetail
+	@OneToMany(mappedBy="product")
+	private List<OrderDetail> orderDetails;
+
+	//bi-directional many-to-one association to Category
+	@ManyToOne
+	private Category category;
+
+	public Product() {
 	}
+
+	public int getId() {
+		return this.id;
+	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getName() {
-		return name;
+
+	public Object getActive() {
+		return this.active;
 	}
-	public void setName(String name) {
-		this.name = name;
+
+	public void setActive(Object active) {
+		this.active = active;
 	}
+
+	public Date getCreatedDate() {
+		return this.createdDate;
+	}
+
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
+	}
+
 	public String getDescription() {
-		return description;
+		return this.description;
 	}
+
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public int getPrice() {
-		return price;
-	}
-	public void setPrice(int price) {
-		this.price = price;
-	}
-	public String getManufacturer() {
-		return manufacturer;
-	}
-	public void setManufacturer(String manufacturer) {
-		this.manufacturer = manufacturer;
-	}
+
 	public String getImage() {
-		return image;
+		return this.image;
 	}
+
 	public void setImage(String image) {
 		this.image = image;
 	}
-	public Date getCreated_date() {
-		return created_date;
+
+	public String getManufacturer() {
+		return this.manufacturer;
 	}
-	public void setCreated_date(Date created_date) {
-		this.created_date = created_date;
+
+	public void setManufacturer(String manufacturer) {
+		this.manufacturer = manufacturer;
 	}
-	public int getActive() {
-		return active;
+
+	public String getName() {
+		return this.name;
 	}
-	public void setActive(int active) {
-		this.active = active;
+
+	public void setName(String name) {
+		this.name = name;
 	}
-	public Category getCategory_id() {
-		return category_id;
+
+	public BigDecimal getPrice() {
+		return this.price;
 	}
-	public void setCategory_id(Category category_id) {
-		this.category_id = category_id;
+
+	public void setPrice(BigDecimal price) {
+		this.price = price;
 	}
-	
+
+	public List<OrderDetail> getOrderDetails() {
+		return this.orderDetails;
+	}
+
+	public void setOrderDetails(List<OrderDetail> orderDetails) {
+		this.orderDetails = orderDetails;
+	}
+
+	public OrderDetail addOrderDetail(OrderDetail orderDetail) {
+		getOrderDetails().add(orderDetail);
+		orderDetail.setProduct(this);
+
+		return orderDetail;
+	}
+
+	public OrderDetail removeOrderDetail(OrderDetail orderDetail) {
+		getOrderDetails().remove(orderDetail);
+		orderDetail.setProduct(null);
+
+		return orderDetail;
+	}
+
+	public Category getCategory() {
+		return this.category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+
 }

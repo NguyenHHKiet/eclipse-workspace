@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: HOUWebAppDemoC1
+Bundle-SymbolicName: HOUWebAppDemoC1
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-18
+Automatic-Module-Name: HOUWebAppDemoC1
+Export-Package: com.hk.configs,
+ com.hk.controllers

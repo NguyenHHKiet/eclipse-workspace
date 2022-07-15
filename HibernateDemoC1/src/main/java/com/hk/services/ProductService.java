@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import javax.persistence.Query;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
@@ -41,26 +42,23 @@ public class ProductService {
 			
 			String fp = params.get("fromPrice");
 			if (fp != null) {
-				Predicate p = b.greaterThanOrEqualTo(root.get("price").as(String.class), 
+				Predicate p = b.greaterThanOrEqualTo(root.get("price"), 
 						new BigDecimal(fp));
 				predicates.add(p);
 			}
 			
 			String tp = params.get("toPrice");
 			if (tp != null) {
-				Predicate p = b.lessThanOrEqualTo(root.get("price").as(String.class), 
+				Predicate p = b.lessThanOrEqualTo(root.get("price"), 
 						new BigDecimal(tp));
 				predicates.add(p);
 			}
 			
 			q.where(predicates.toArray(new Predicate[] {}));
 			
-			
-			
-			
 			q.orderBy(b.desc(root.get("id")), b.desc(root.get("name")));
 			
-			Query query = session.createQuery(q);
+			Query query = (Query) session.createQuery(q.toString(), Product.class);
 			
 			if (page > 0) {
 				int start = (page - 1) * SIZE;
@@ -71,5 +69,6 @@ public class ProductService {
 			return query.getResultList();
 			
 		}
+		
 	}
 }

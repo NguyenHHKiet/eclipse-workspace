@@ -4,19 +4,22 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.persistence.Query;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+import javax.persistence.criteria.CriteriaBuilder;
 
 import org.hibernate.Session;
-
+import org.hibernate.query.Query;
 import com.hk.pojo.Product;
 import com.hk.services.ProductService;
 
-
+@PersistenceContext
 public class Demo {
+	
 
 	public static void main(String[] args) {
 		try(Session s = HibernateUtils.getFactory().openSession()) {
-			Query q = (Query) s.createNamedQuery("Product.findAll", Product.class);
+			Query<Product> q = s.createNamedQuery("Product.findAll", Product.class);
 			List<Product> products = q.getResultList();
 			products.forEach(p -> 
 				System.out.printf("%d - %s - %.1f\n", 
@@ -32,5 +35,9 @@ public class Demo {
 //		s.getProducts(params, 2).forEach(p -> 
 //		System.out.println("%d - %s - %.1f\n", 
 //				p.getId(), p.getName(), p.getPrice()));
+
+
+		
+		
 	}
 }

@@ -11,6 +11,8 @@ import org.hibernate.service.ServiceRegistry;
 
 import com.hk.pojo.Product;
 
+
+
 public class HibernateUtils {
 
 	private static final SessionFactory factory;
@@ -18,9 +20,9 @@ public class HibernateUtils {
 	static {
 		Configuration config = new Configuration();
 		Properties props = new Properties();
-		props.setProperty(Environment.DIALECT, "org.hibernate.dialect.MYSQLDialect");
+		props.setProperty(Environment.DIALECT, "org.hibernate.dialect.MySQL5Dialect");
 		props.setProperty(Environment.DRIVER, "com.mysql.cj.jdbc.Driver");
-		props.setProperty(Environment.URL, "jdbc:mysql://localhost/saledb");
+		props.setProperty(Environment.URL, "jdbc:mysql://localhost/sales");
 		props.setProperty(Environment.USER, "root");
 		props.setProperty(Environment.PASS, "");
 		props.setProperty(Environment.SHOW_SQL, "true");
