@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>HOUWebAppDemoC1</groupId>
 	<artifactId>HOUWebAppDemoC1</artifactId>
@@ -74,14 +72,12 @@
 			<artifactId>spring-beans</artifactId>
 			<version>5.3.21</version>
 		</dependency>
-
-
-		<!-- JPA Vendor -->
 		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
-			<version>5.6.10.Final</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>5.3.21</version>
 		</dependency>
+
 
 		<!-- IN MEMORY Database and JDBC Driver -->
 		<dependency>
@@ -108,6 +104,29 @@
 			<scope>provided</scope>
 		</dependency>
 
+		<!-- cloudinary -->
+		<dependency>
+			<groupId>com.cloudinary</groupId>
+			<artifactId>cloudinary-core</artifactId>
+			<version>1.32.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.cloudinary</groupId>
+			<artifactId>cloudinary-http44</artifactId>
+			<version>1.32.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.cloudinary</groupId>
+			<artifactId>cloudinary-taglib</artifactId>
+			<version>1.32.2</version>
+		</dependency>
+		<!-- Template with Tiles -->
+		<dependency>
+			<groupId>org.apache.tiles</groupId>
+			<artifactId>tiles-extras</artifactId>
+			<version>3.0.8</version>
+		</dependency>
+
 
 		<dependency>
 			<groupId>mysql</groupId>
@@ -115,6 +134,7 @@
 			<version>8.0.29</version>
 		</dependency>
 
+		<!-- hibernate -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
@@ -127,17 +147,30 @@
 			<version>6.0.2.Final</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.hibernate.javax.persistence/hibernate-jpa-2.1-api -->
 		<dependency>
 			<groupId>org.hibernate.javax.persistence</groupId>
 			<artifactId>hibernate-jpa-2.1-api</artifactId>
 			<version>1.0.2.Final</version>
 		</dependency>
+
 		<dependency>
-			<groupId>org.hibernate.common</groupId>
-			<artifactId>hibernate-commons-annotations</artifactId>
-			<version>6.0.2.Final</version>
+			<groupId>org.hibernate.orm</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>6.1.1.Final</version>
 		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-search-orm</artifactId>
+			<version>4.3.0.Final</version>
+		</dependency>
+
+		<!-- JPA Vendor -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>5.6.10.Final</version>
+		</dependency>
+
 
 		<!-- https://mvnrepository.com/artifact/net.sourceforge.jtds/jtds -->
 		<dependency>

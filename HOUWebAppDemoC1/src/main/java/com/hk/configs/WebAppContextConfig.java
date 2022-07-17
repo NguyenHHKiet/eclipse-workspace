@@ -34,7 +34,9 @@ import org.springframework.web.servlet.view.JstlView;
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = {
-		"com.hk.controllers"
+		"com.hk.controllers",
+		"com.hk.services",
+		"com.hk.repository"
 })
 public class WebAppContextConfig implements WebMvcConfigurer{
 
