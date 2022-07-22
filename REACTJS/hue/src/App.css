@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.home,
+.services,
+.histories,
+.sign-up {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.services {
+  background-image: url('https://res.cloudinary.com/dhyyyqwaf/image/upload/v1658390542/thua%20thien%20-%20hue/Gia_Long_Tomb_Hue_Vietnam_Tourism_kjtoad.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.histories {
+  background-image: url('https://res.cloudinary.com/dhyyyqwaf/image/upload/v1658367900/thua%20thien%20-%20hue/Hue-Herobanner-Title-ThienMuPagoda_aah2g2.jpg');
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.sign-up {
+  background-image: url('https://res.cloudinary.com/dhyyyqwaf/image/upload/v1658390541/thua%20thien%20-%20hue/dia-diem-du-lich-Hue-09_jtpsbr.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
