@@ -1,8 +1,8 @@
-package com.theplayer.jpa;
+package com.hk.pojo;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.*;
+import java.util.List;
 
 
 /**
@@ -15,7 +15,6 @@ public class Category implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int id;
 
 	private String description;

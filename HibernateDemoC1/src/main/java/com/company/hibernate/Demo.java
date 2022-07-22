@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NamedQuery;
 import javax.persistence.PersistenceContext;
 import javax.persistence.criteria.CriteriaBuilder;
 
@@ -25,7 +26,7 @@ public class Demo {
 				System.out.printf("%d - %s - %.1f\n", 
 				p.getId(), p.getName(), p.getPrice()));
 		}
-		
+
 //		ProductService s = new ProductService();
 //		
 //		Map<String, String> params = new HashMap<String, String>();
