@@ -13,10 +13,6 @@
 		<param-value>/WEB-INF/applicationContext.xml</param-value>
 	</context-param>
 	
-	<listener>
-		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-	</listener>
-	
 	<!-- servlet -->
 	<!-- ///////////////////////// Warning ////////////////////////////////
 	Could not open ServletContext resource [/WEB-INF/appServlet-servlet.xml]
@@ -27,19 +23,6 @@
 	-->
 	
  	 
-	<servlet>
-		<servlet-name>appServlet</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<load-on-startup>1</load-on-startup>
-	</servlet>
 
-	<servlet-mapping>
-		<servlet-name>appServlet</servlet-name>
-		<url-pattern>/</url-pattern>
-	</servlet-mapping>
-
-	<session-config>
-		<session-timeout>30</session-timeout>
-	</session-config>
 
 </web-app>
