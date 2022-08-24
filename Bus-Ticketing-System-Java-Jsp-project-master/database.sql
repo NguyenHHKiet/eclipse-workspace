@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `ticketing_system`
 --
-CREATE DATABASE IF NOT EXISTS `ticketing_system` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+CREATE SCHEMA IF NOT EXISTS `ticketing_system` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci ;
 USE `ticketing_system`;
 
 -- --------------------------------------------------------
