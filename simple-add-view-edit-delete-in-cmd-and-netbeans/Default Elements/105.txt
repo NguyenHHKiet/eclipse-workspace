@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 DUBNIUM 			||
+==========================================================
+|| Element Name    :  Dubnium				|| 
+|| Atomic Symbol   :  Db         			|| 
+|| Element Group   :  Early Transistion Metals        	|| 
+|| Atomic Number   :  105 			 	|| 
+|| Atomic Mass     :  					|| 
+|| Atomic Density  :  					|| 
+|| Melting Point   :    	  			|| 
+|| Boiling Point   :  		    		 	|| 
+|| Uses            :  Fingerprint Detector, Photograph  ||
+||		      Needle				||
+==========================================================

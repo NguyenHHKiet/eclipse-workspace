@@ -1,0 +1,13 @@
+__________________________________________________________
+||			GADOLINIUM			||
+==========================================================
+|| Element Name    :  Gadolinium			|| 
+|| Atomic Symbol   :  Gd        			|| 
+|| Element Group   :  Lanthanides	  		|| 
+|| Atomic Number   :  64 			 	|| 
+|| Atomic Mass     :  157.25				|| 
+|| Atomic Density  :  7.89 g/cm3 			|| 
+|| Melting Point   :  1311 °C    			|| 
+|| Boiling Point   :  3233 °C    		 	|| 
+|| Uses            :  Magnetic Component		||
+==========================================================

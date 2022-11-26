@@ -1,0 +1,7 @@
+truncate table AdministratorAccounts;
+
+truncate table InstructorAccounts;
+
+truncate table studentAccounts;
+
+truncate table courses;

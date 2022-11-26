@@ -1,0 +1,13 @@
+__________________________________________________________
+||			 HOLMIUM			||
+==========================================================
+|| Element Name    :  Holmium   			|| 
+|| Atomic Symbol   :  Ho        			|| 
+|| Element Group   :  Lanthanides	  		|| 
+|| Atomic Number   :  67 			 	|| 
+|| Atomic Mass     :  164.9				|| 
+|| Atomic Density  :  8.78 g/cm3 			|| 
+|| Melting Point   :  1470 °C    			|| 
+|| Boiling Point   :  2720 °C    		 	|| 
+|| Uses            :  Electronic Devices		||
+==========================================================

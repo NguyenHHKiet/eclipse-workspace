@@ -1,0 +1,15 @@
+__________________________________________________________
+||			FLOURINE			||
+==========================================================
+|| Element Name    :  Oxygen				|| 
+|| Atomic Symbol   :  F 				|| 
+|| Element Group   :  Halogens          		|| 
+|| Atomic Number   :  9 				|| 
+|| Atomic Mass     :  18.9984				|| 
+|| Atomic Density  :  1.696  g/cm3			|| 
+|| Melting Point   :  -219.62 °C   			|| 
+|| Boiling Point   :  -188.14 °C   			|| 
+|| Uses            :  Toothpaste additive,		||  
+|| 		      High-temperature plastics,	|| 
+|| 		      Refrigerant			|| 
+==========================================================

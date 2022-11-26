@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 BARIUM	 			||
+==========================================================
+|| Element Name    :  Barium				|| 
+|| Atomic Symbol   :  Ba 				|| 
+|| Element Group   :  Alkaline Earth Metals  		|| 
+|| Atomic Number   :  56 			 	|| 
+|| Atomic Mass     :  137.3				|| 
+|| Atomic Density  :  3.5 g/cm3 			|| 
+|| Melting Point   :  725 °C    			|| 
+|| Boiling Point   :  1640 °C    		 	|| 
+|| Uses            :  Spark Plugs, Rubber, Paint, Glass ||
+||		      X-ray, Rat Poison, Fireworks	||
+==========================================================

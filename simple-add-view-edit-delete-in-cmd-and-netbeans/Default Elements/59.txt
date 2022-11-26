@@ -1,0 +1,13 @@
+__________________________________________________________
+||			PRASEODYMIUM			||
+==========================================================
+|| Element Name    :  Praseodymium			|| 
+|| Atomic Symbol   :  Pr 				|| 
+|| Element Group   :  Lanthanides	  		|| 
+|| Atomic Number   :  59 			 	|| 
+|| Atomic Mass     :  140.9				|| 
+|| Atomic Density  :  6.77 g/cm3 			|| 
+|| Melting Point   :  931 °C    			|| 
+|| Boiling Point   :  3252 °C    		 	|| 
+|| Uses            :  Coloring Glass, Enamel, Core Mat  ||
+==========================================================

@@ -1,0 +1,13 @@
+__________________________________________________________
+||			UNUNQUADIUM 			||
+==========================================================
+|| Element Name    :  Ununquadium			|| 
+|| Atomic Symbol   :  Uuq         			|| 
+|| Element Group   :  Trasuranium               	|| 
+|| Atomic Number   :  114 			 	|| 
+|| Atomic Mass     :  					|| 
+|| Atomic Density  :  					|| 
+|| Melting Point   :    	  			|| 
+|| Boiling Point   :  		    		 	|| 
+|| Uses            :  					||
+==========================================================

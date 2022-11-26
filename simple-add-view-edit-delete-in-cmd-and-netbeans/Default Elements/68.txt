@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 ERBIUM				||
+==========================================================
+|| Element Name    :  Erbium   				|| 
+|| Atomic Symbol   :  Er        			|| 
+|| Element Group   :  Lanthanides	  		|| 
+|| Atomic Number   :  68 			 	|| 
+|| Atomic Mass     :  167.25				|| 
+|| Atomic Density  :  9.04 g/cm3 			|| 
+|| Melting Point   :  1522 °C    			|| 
+|| Boiling Point   :  2510 °C    		 	|| 
+|| Uses            :  Glass Colorant, Porcelain Enamel	||
+||		      Glazzes				||
+==========================================================

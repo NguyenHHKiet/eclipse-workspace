@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 HAFNIUM			||
+==========================================================
+|| Element Name    :  Hafnium				|| 
+|| Atomic Symbol   :  Hf        			|| 
+|| Element Group   :  Early Transistion Metals	  	|| 
+|| Atomic Number   :  72 			 	|| 
+|| Atomic Mass     :  178.49				|| 
+|| Atomic Density  :  13.1 g/cm3 			|| 
+|| Melting Point   :  2227 °C    			|| 
+|| Boiling Point   :  4602 °C    		 	|| 
+|| Uses            :  Nuclear Submarines, Reactor 	||
+||		      Control Rods			||
+==========================================================

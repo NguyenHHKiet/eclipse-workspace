@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 TECHNETIUM 			||
+==========================================================
+|| Element Name    :  Technetium			|| 
+|| Atomic Symbol   :  Tc 				|| 
+|| Element Group   :  Early Transistion Metals	 	|| 
+|| Atomic Number   :  43 			 	|| 
+|| Atomic Mass     :  [98]				|| 
+|| Atomic Density  :  		 			|| 
+|| Melting Point   :  2172 °C    			|| 
+|| Boiling Point   :  4877 °C    		 	|| 
+|| Uses            :  Radiation Therapy, Corrosion      || 
+||		      inhibitor in steel		||
+==========================================================

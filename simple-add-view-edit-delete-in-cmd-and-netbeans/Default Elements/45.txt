@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 RHODIUM 			||
+==========================================================
+|| Element Name    :  Rhodium				|| 
+|| Atomic Symbol   :  Rh 				|| 
+|| Element Group   :  Late Transistion Metals	 	|| 
+|| Atomic Number   :  45 			 	|| 
+|| Atomic Mass     :  102.9				|| 
+|| Atomic Density  :  12.44	 			|| 
+|| Melting Point   :  1966 °C    			|| 
+|| Boiling Point   :  3647 °C    		 	|| 
+|| Uses            :  Headlight Reflector, Furnace      || 
+||		      winding, Bushings, Spark Plugs	||
+==========================================================

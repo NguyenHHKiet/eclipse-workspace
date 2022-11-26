@@ -1,0 +1,13 @@
+__________________________________________________________
+||			PROMETHIUM			||
+==========================================================
+|| Element Name    :  Promethium			|| 
+|| Atomic Symbol   :  Pm 				|| 
+|| Element Group   :  Lanthanides	  		|| 
+|| Atomic Number   :  61 			 	|| 
+|| Atomic Mass     :  [145]				|| 
+|| Atomic Density  :  7.22 g/cm3 			|| 
+|| Melting Point   :  1080 °C    			|| 
+|| Boiling Point   :  2460 °C    		 	|| 
+|| Uses            :  Nuclear powered battery		||
+==========================================================

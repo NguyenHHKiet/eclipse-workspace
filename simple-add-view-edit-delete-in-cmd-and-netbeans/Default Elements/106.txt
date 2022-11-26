@@ -1,0 +1,14 @@
+__________________________________________________________
+||			SEABORGIUM 			||
+==========================================================
+|| Element Name    :  Seaborgium			|| 
+|| Atomic Symbol   :  Sg         			|| 
+|| Element Group   :  Early Transistion Metals        	|| 
+|| Atomic Number   :  106 			 	|| 
+|| Atomic Mass     :  					|| 
+|| Atomic Density  :  					|| 
+|| Melting Point   :    	  			|| 
+|| Boiling Point   :  		    		 	|| 
+|| Uses            :  Fingerprint Detector, Photograph  ||
+||		      Needle				||
+==========================================================

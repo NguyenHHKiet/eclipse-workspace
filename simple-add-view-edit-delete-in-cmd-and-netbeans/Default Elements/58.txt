@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 CERIUM				||
+==========================================================
+|| Element Name    :  Cerium				|| 
+|| Atomic Symbol   :  Ce 				|| 
+|| Element Group   :  Lanthanides	  		|| 
+|| Atomic Number   :  58 			 	|| 
+|| Atomic Mass     :  140.11				|| 
+|| Atomic Density  :  6.77 g/cm3 			|| 
+|| Melting Point   :  798 °C    			|| 
+|| Boiling Point   :  3212 °C    		 	|| 
+|| Uses            :  Misch Metal, Glass Manufacturing  ||
+||		      Volumetric oxidizing agent        ||
+==========================================================

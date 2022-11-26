@@ -1,0 +1,14 @@
+__________________________________________________________
+||			   GALLIUM 			||
+==========================================================
+|| Element Name    :  Gallium				|| 
+|| Atomic Symbol   :  Ga 				|| 
+|| Element Group   :  Boron Group	  	      	|| 
+|| Atomic Number   :  31 				|| 
+|| Atomic Mass     :  69.71				|| 
+|| Atomic Density  :  5.9 g/cm3 			|| 
+|| Melting Point   :  29.78 °C    			|| 
+|| Boiling Point   :  2403 °C    			|| 
+|| Uses            :  Quarts Thermometers, Transistors, || 
+||		      Alloy Component			||
+==========================================================

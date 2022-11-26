@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 TANTALUM			||
+==========================================================
+|| Element Name    :  Tantalum				|| 
+|| Atomic Symbol   :  Ta        			|| 
+|| Element Group   :  Early Transistion Metals	  	|| 
+|| Atomic Number   :  73 			 	|| 
+|| Atomic Mass     :  180.9				|| 
+|| Atomic Density  :  16.63 g/cm3 			|| 
+|| Melting Point   :  2996 °C    			|| 
+|| Boiling Point   :  5426 °C    		 	|| 
+|| Uses            :  Cutting Tools, Surgical Appliance ||
+||		      Capacitors			||
+==========================================================

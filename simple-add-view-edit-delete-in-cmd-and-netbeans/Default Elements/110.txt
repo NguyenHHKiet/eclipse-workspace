@@ -1,0 +1,13 @@
+__________________________________________________________
+||			DARNSTADTIUM 			||
+==========================================================
+|| Element Name    :  Darmstadtium			|| 
+|| Atomic Symbol   :  Ds         			|| 
+|| Element Group   :  Late Transistion Metals        	|| 
+|| Atomic Number   :  110 			 	|| 
+|| Atomic Mass     :  					|| 
+|| Atomic Density  :  					|| 
+|| Melting Point   :    	  			|| 
+|| Boiling Point   :  		    		 	|| 
+|| Uses            :  					||
+==========================================================

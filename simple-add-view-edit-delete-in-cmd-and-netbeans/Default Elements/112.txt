@@ -1,0 +1,13 @@
+__________________________________________________________
+||			COPERNICUM 			||
+==========================================================
+|| Element Name    :  Copernicum			|| 
+|| Atomic Symbol   :  Cn         			|| 
+|| Element Group   :  Late Transistion Metals        	|| 
+|| Atomic Number   :  112 			 	|| 
+|| Atomic Mass     :  					|| 
+|| Atomic Density  :  					|| 
+|| Melting Point   :    	  			|| 
+|| Boiling Point   :  		    		 	|| 
+|| Uses            :  					||
+==========================================================

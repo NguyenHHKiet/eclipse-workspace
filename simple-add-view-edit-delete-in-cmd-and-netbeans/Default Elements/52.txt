@@ -1,0 +1,13 @@
+__________________________________________________________
+||			 TELLURIUM	 		||
+==========================================================
+|| Element Name    :  Tellurium				|| 
+|| Atomic Symbol   :  Te 				|| 
+|| Element Group   :  Chalcogens		 	|| 
+|| Atomic Number   :  52 			 	|| 
+|| Atomic Mass     :  127.6				|| 
+|| Atomic Density  :  6.24 g/cm3			|| 
+|| Melting Point   :  449.7 °C    			|| 
+|| Boiling Point   :  989.8 °C    		 	|| 
+|| Uses            :  Vulcanization of Rubber, Ceramics	||
+==========================================================

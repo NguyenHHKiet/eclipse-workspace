@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 RUTHENIUM 			||
+==========================================================
+|| Element Name    :  Ruthenium				|| 
+|| Atomic Symbol   :  Ru 				|| 
+|| Element Group   :  Late Transistion Metals	 	|| 
+|| Atomic Number   :  44 			 	|| 
+|| Atomic Mass     :  101.07				|| 
+|| Atomic Density  :  12.1	 			|| 
+|| Melting Point   :  2310 °C    			|| 
+|| Boiling Point   :  3900 °C    		 	|| 
+|| Uses            :  Eye Treatment, Hardener and Alloy || 
+||		      Catalyst				||
+==========================================================

@@ -1,0 +1,14 @@
+__________________________________________________________
+||			GERMANIUM 			||
+==========================================================
+|| Element Name    :  Germanium				|| 
+|| Atomic Symbol   :  Ge 				|| 
+|| Element Group   :  Carbon Group	  	      	|| 
+|| Atomic Number   :  32 				|| 
+|| Atomic Mass     :  72.68				|| 
+|| Atomic Density  :  5.36 g/cm3 			|| 
+|| Melting Point   :  937.3 °C    			|| 
+|| Boiling Point   :  2830 °C    			|| 
+|| Uses            :  Special Camera Lens, Transistors, || 
+||		      Phosphors, Spectroscopes		||
+==========================================================

@@ -1,0 +1,14 @@
+__________________________________________________________
+||			  CHROMIUM 			||
+==========================================================
+|| Element Name    :  Chromium				|| 
+|| Atomic Symbol   :  Cr 				|| 
+|| Element Group   :  Early Tansistion Metals  	      	|| 
+|| Atomic Number   :  24 				|| 
+|| Atomic Mass     :  51.966				|| 
+|| Atomic Density  :  7.14 g/cm3 			|| 
+|| Melting Point   :  1867 °C    			|| 
+|| Boiling Point   :  2672 °C    			|| 
+|| Uses            :  Videotape, Stainless Steel	|| 
+||		      Textile Mordant, Tanning Agent	||
+==========================================================

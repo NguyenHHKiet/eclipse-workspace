@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 STRONTIUM 			||
+==========================================================
+|| Element Name    :  Strontium				|| 
+|| Atomic Symbol   :  Sr 				|| 
+|| Element Group   :  Alkaline Earth  Metals	 	|| 
+|| Atomic Number   :  38 			 	|| 
+|| Atomic Mass     :  87.62				|| 
+|| Atomic Density  :  2.6 g/cm3 			|| 
+|| Melting Point   :  769 °C    			|| 
+|| Boiling Point   :  1364 °C    		 	|| 
+|| Uses            :  Fireworks, Glass for Color, TV 	|| 
+||		      Ferrite Magnet			||
+==========================================================

@@ -1,0 +1,14 @@
+__________________________________________________________
+||			  VANADIUM 			||
+==========================================================
+|| Element Name    :  Vanadium				|| 
+|| Atomic Symbol   :  V 				|| 
+|| Element Group   :  Early Tansistion Metals  	      	|| 
+|| Atomic Number   :  23 				|| 
+|| Atomic Mass     :  50.9415				|| 
+|| Atomic Density  :  6.1 g/cm3 			|| 
+|| Melting Point   :  1890 °C    			|| 
+|| Boiling Point   :  3390 °C    			|| 
+|| Uses            :  High-Strength tools, Ceramics	|| 
+||		      Superconductor Magnet, Spring	||
+==========================================================

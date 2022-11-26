@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 PALLADIUM 			||
+==========================================================
+|| Element Name    :  Palladium				|| 
+|| Atomic Symbol   :  Pd 				|| 
+|| Element Group   :  Late Transistion Metals	 	|| 
+|| Atomic Number   :  46 			 	|| 
+|| Atomic Mass     :  106.42				|| 
+|| Atomic Density  :  12.16 g/cm3			|| 
+|| Melting Point   :  1554 °C    			|| 
+|| Boiling Point   :  3140 °C    		 	|| 
+|| Uses            :  Dental Crowns, Jewelries, Watches || 
+||		      Surgical Instruments		||
+==========================================================

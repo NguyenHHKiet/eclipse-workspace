@@ -1,0 +1,13 @@
+__________________________________________________________
+||			ROENTGENIUM 			||
+==========================================================
+|| Element Name    :  Roentgenium			|| 
+|| Atomic Symbol   :  Rg         			|| 
+|| Element Group   :  Late Transistion Metals        	|| 
+|| Atomic Number   :  111 			 	|| 
+|| Atomic Mass     :  					|| 
+|| Atomic Density  :  					|| 
+|| Melting Point   :    	  			|| 
+|| Boiling Point   :  		    		 	|| 
+|| Uses            :  					||
+==========================================================

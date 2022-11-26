@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 SODIUM 			||
+==========================================================
+|| Element Name    :  Sodium				|| 
+|| Atomic Symbol   :  Na				|| 
+|| Element Group   :  Alkali Metals          		|| 
+|| Atomic Number   :  11 				|| 
+|| Atomic Mass     :  22.98977				|| 
+|| Atomic Density  :  0.972  g/cm3			|| 
+|| Melting Point   :  97.81 °C   			|| 
+|| Boiling Point   :  882.9 °C   			|| 
+|| Uses            :  Salt, Soda, Glass, Metal Purifier	||  
+|| 		      Soap, Paper, Textile		|| 
+==========================================================

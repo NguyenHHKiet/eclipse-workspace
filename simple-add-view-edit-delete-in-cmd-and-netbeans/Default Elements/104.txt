@@ -1,0 +1,14 @@
+__________________________________________________________
+||			RUTHERFORDIUM 			||
+==========================================================
+|| Element Name    :  Rutherfordium			|| 
+|| Atomic Symbol   :  Rf         			|| 
+|| Element Group   :  Early Transistion Metals        	|| 
+|| Atomic Number   :  104 			 	|| 
+|| Atomic Mass     :  					|| 
+|| Atomic Density  :  					|| 
+|| Melting Point   :    	  			|| 
+|| Boiling Point   :  		    		 	|| 
+|| Uses            :  Fingerprint Detector, Photograph  ||
+||		      Needle				||
+==========================================================

@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 XENON	 			||
+==========================================================
+|| Element Name    :  Xenon				|| 
+|| Atomic Symbol   :  Xe 				|| 
+|| Element Group   :  Inert Gases  		 	|| 
+|| Atomic Number   :  54 			 	|| 
+|| Atomic Mass     :  131.29				|| 
+|| Atomic Density  :  3.05 g/cm3			|| 
+|| Melting Point   :  -112 °C    			|| 
+|| Boiling Point   :  -117 °C    		 	|| 
+|| Uses            :  Sun Lamps, UV lamps, Vacuum and   ||
+||		      electron tube, Bubble Chamber	||
+==========================================================

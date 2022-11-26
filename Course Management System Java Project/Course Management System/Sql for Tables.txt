@@ -1,0 +1,35 @@
+create table AdministratorAccounts (
+	id varchar2(4),
+	lastname varchar2(20),
+	firstname varchar2(20),
+	username varchar2(20),
+	password varchar2(20) 
+);
+
+create table InstructorAccounts (
+	id varchar2(4),
+	lastname varchar2(20),
+	firstname varchar2(20),
+	username varchar2(20),
+	password varchar2(20) 
+);
+
+create table StudentAccounts(
+	id varchar2(4),
+	lastname varchar2(20),
+	firstname varchar2(20),
+	username varchar2(20),
+	password varchar2(20) 
+);
+
+create table courses (
+	id varchar2(4),
+	coursename varchar2(20),
+	numHw int
+);
+
+
+drop table AdministratorAccounts;
+drop table InstructorAccounts; 
+drop table StudentAccounts;
+drop table courses;

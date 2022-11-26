@@ -1,0 +1,14 @@
+__________________________________________________________
+||			POTASSIUM 			||
+==========================================================
+|| Element Name    :  Potassium				|| 
+|| Atomic Symbol   :  K 				|| 
+|| Element Group   :  Alkali Metals  	          	|| 
+|| Atomic Number   :  19 				|| 
+|| Atomic Mass     :  39.0983				|| 
+|| Atomic Density  :  0.87 g/cm3			|| 
+|| Melting Point   :  63.25 °C    			|| 
+|| Boiling Point   :  759.9 °C    			|| 
+|| Uses            :  Fertilizers, Heat transfer agent, ||  
+|| 		      Matches, Fireworks, Explosives	|| 
+==========================================================

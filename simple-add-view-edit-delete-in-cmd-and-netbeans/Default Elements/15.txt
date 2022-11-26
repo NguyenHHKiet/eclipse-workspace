@@ -1,0 +1,14 @@
+__________________________________________________________
+||			PHOSPHORUS 			||
+==========================================================
+|| Element Name    :  Phosphorus			|| 
+|| Atomic Symbol   :  P 				|| 
+|| Element Group   :  Nitrogen Group	          	|| 
+|| Atomic Number   :  15 				|| 
+|| Atomic Mass     :  30.9736				|| 
+|| Atomic Density  :  1.83 g/cm3			|| 
+|| Melting Point   :  44.1 °C    			|| 
+|| Boiling Point   :  280 °C    			|| 
+|| Uses            :  Matches, Fireworks, Pesticides, 	||  
+|| 		      Fertilizers, Water Softener	|| 
+==========================================================

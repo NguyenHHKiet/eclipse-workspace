@@ -1,0 +1,14 @@
+__________________________________________________________
+||			NITROGEN  			||
+==========================================================
+|| Element Name    :  Nitrogen				|| 
+|| Atomic Symbol   :  N 				|| 
+|| Element Group   :  Nitrogen Group       		|| 
+|| Atomic Number   :  7 				|| 
+|| Atomic Mass     :  14.00643				|| 
+|| Atomic Density  :  1.25  g/cm3			|| 
+|| Melting Point   :  -209.9 °C   			|| 
+|| Boiling Point   :  -195.8 °C   			|| 
+|| Uses            :  Purge for Missile components, 	||  
+|| 		      Refrigerant, Insulator		|| 
+==========================================================

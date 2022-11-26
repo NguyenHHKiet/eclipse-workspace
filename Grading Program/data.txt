@@ -1,0 +1,6 @@
+The program accept four course units.
+The user First Feed In the Course Work marks and then Feed In the Exam Marks
+The program give Will Add the course work and Exam Marks And Give out The Total
+The program then calculate the total marks in all the four course Units
+The Program calculate the Average marks of the student
+Finally the program determine the Grade depending on the G.P.A

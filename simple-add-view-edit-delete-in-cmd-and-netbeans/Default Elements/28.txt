@@ -1,0 +1,14 @@
+__________________________________________________________
+||			  NICKEL 			||
+==========================================================
+|| Element Name    :  Nickel				|| 
+|| Atomic Symbol   :  Ni 				|| 
+|| Element Group   :  Late Tansistion Metals  	      	|| 
+|| Atomic Number   :  28 				|| 
+|| Atomic Mass     :  58.6931				|| 
+|| Atomic Density  :  8.87 g/cm3 			|| 
+|| Melting Point   :  1453 °C    			|| 
+|| Boiling Point   :  2732 °C    			|| 
+|| Uses            :  Coins, Stainless Steel Making, 	|| 
+||		      Catalyst for hydrogenation of oil ||
+==========================================================

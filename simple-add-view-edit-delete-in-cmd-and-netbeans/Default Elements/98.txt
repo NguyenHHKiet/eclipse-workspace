@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 CALIFORNIUM 			||
+==========================================================
+|| Element Name    :  Californium			|| 
+|| Atomic Symbol   :  Cf         			|| 
+|| Element Group   :  Actinides         	  	|| 
+|| Atomic Number   :  98 			 	|| 
+|| Atomic Mass     :  190.23				|| 
+|| Atomic Density  :  22.5 g/cm3 			|| 
+|| Melting Point   :  3045 °C    			|| 
+|| Boiling Point   :  5027 °C    		 	|| 
+|| Uses            :  Fingerprint Detector, Photograph  ||
+||		      Needle				||
+==========================================================

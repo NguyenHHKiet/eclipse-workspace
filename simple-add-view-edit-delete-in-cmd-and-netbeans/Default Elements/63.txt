@@ -1,0 +1,14 @@
+__________________________________________________________
+||			EUROPIUM			||
+==========================================================
+|| Element Name    :  Europium				|| 
+|| Atomic Symbol   :  Eu 				|| 
+|| Element Group   :  Lanthanides	  		|| 
+|| Atomic Number   :  63 			 	|| 
+|| Atomic Mass     :  151.96				|| 
+|| Atomic Density  :  5.54 g/cm3 			|| 
+|| Melting Point   :  822 °C    			|| 
+|| Boiling Point   :  1578 °C    		 	|| 
+|| Uses            :  Laser Material, Neutron, Absorber	||
+||		      Phosphor				||
+==========================================================

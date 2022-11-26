@@ -1,0 +1,62 @@
+
+Java Programming Course work Marks = 23
+
+Java Programming Final Exam Marks = 46
+
+Total Marks In Java Programming = 69
+
+Website Development Course work Marks = 15
+
+Website Development Final Exam Marks = 65
+
+Total Marks In web Website Development = 80
+
+System Analysis Course Work Marks = 28
+
+System Analysis Final Exam Marks = 44
+
+Total Marks In System Analysis = 72
+
+System Security Course Work Marks = 21
+
+System Security Final Exam Marks = 39
+
+Total Marks In System Security = 60
+
+GRAND TOTAL IN ALL COURSE UNITS = 281
+
+Student Average Marks = 70.0
+
+YOUR GPA IS 3.0 AND YOUR GRADE IS B
+
+
+Java Programming Course work Marks = 23
+
+Java Programming Final Exam Marks = 45
+
+Total Marks In Java Programming = 68
+
+Website Development Course work Marks = 12
+
+Website Development Final Exam Marks = 46
+
+Total Marks In web Website Development = 58
+
+System Analysis Course Work Marks = 25
+
+System Analysis Final Exam Marks = 67
+
+Total Marks In System Analysis = 92
+
+System Security Course Work Marks = 67
+
+System Security Final Exam Marks = 56
+
+Total Marks In System Security = 123
+
+GRAND TOTAL IN ALL COURSE UNITS = 341
+
+Student Average Marks = 85.0
+
+YOUR GPA IS 4.0 AND YOUR GRADE IS A
+

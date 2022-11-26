@@ -1,0 +1,14 @@
+__________________________________________________________
+||			BOHRIUM 			||
+==========================================================
+|| Element Name    :  Bohrium				|| 
+|| Atomic Symbol   :  Bh         			|| 
+|| Element Group   :  Early Transistion Metals        	|| 
+|| Atomic Number   :  107 			 	|| 
+|| Atomic Mass     :  					|| 
+|| Atomic Density  :  					|| 
+|| Melting Point   :    	  			|| 
+|| Boiling Point   :  		    		 	|| 
+|| Uses            :  Fingerprint Detector, Photograph  ||
+||		      Needle				||
+==========================================================

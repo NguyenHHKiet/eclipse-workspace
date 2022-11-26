@@ -1,0 +1,14 @@
+__________________________________________________________
+||			HASSIUM 			||
+==========================================================
+|| Element Name    :  Hassium				|| 
+|| Atomic Symbol   :  Hs         			|| 
+|| Element Group   :  Late Transistion Metals        	|| 
+|| Atomic Number   :  108 			 	|| 
+|| Atomic Mass     :  					|| 
+|| Atomic Density  :  					|| 
+|| Melting Point   :    	  			|| 
+|| Boiling Point   :  		    		 	|| 
+|| Uses            :  Fingerprint Detector, Photograph  ||
+||		      Needle				||
+==========================================================

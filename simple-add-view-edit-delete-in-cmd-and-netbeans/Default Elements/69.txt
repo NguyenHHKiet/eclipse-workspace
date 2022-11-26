@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 THULIUM			||
+==========================================================
+|| Element Name    :  Thulium  				|| 
+|| Atomic Symbol   :  Tm        			|| 
+|| Element Group   :  Lanthanides	  		|| 
+|| Atomic Number   :  69 			 	|| 
+|| Atomic Mass     :  168.2				|| 
+|| Atomic Density  :  9.32 g/cm3 			|| 
+|| Melting Point   :  1545 °C    			|| 
+|| Boiling Point   :  1727 °C    		 	|| 
+|| Uses            :  X-ray, Energy Source, Ceramic	||
+||		      Magnetic Material			||
+==========================================================

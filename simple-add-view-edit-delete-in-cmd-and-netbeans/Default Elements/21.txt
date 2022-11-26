@@ -1,0 +1,14 @@
+__________________________________________________________
+||			  SCANDIUM 			||
+==========================================================
+|| Element Name    :  Scandium				|| 
+|| Atomic Symbol   :  Sc 				|| 
+|| Element Group   :  Early Tansistion Metals  	      	|| 
+|| Atomic Number   :  21 				|| 
+|| Atomic Mass     :  44.9567				|| 
+|| Atomic Density  :  2.98 g/cm3			|| 
+|| Melting Point   :  1539 °C    			|| 
+|| Boiling Point   :  2832 °C    			|| 
+|| Uses            :  Spacecraft Material, High		|| 
+||		      Intensity Light, Tracing Agent	||
+==========================================================

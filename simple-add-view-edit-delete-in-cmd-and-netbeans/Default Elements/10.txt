@@ -1,0 +1,14 @@
+__________________________________________________________
+||			   NEON 			||
+==========================================================
+|| Element Name    :  Neon				|| 
+|| Atomic Symbol   :  Ne				|| 
+|| Element Group   :  Inert Gases          		|| 
+|| Atomic Number   :  10 				|| 
+|| Atomic Mass     :  20.1797				|| 
+|| Atomic Density  :  1.204  g/cm3			|| 
+|| Melting Point   :  -248.7 °C   			|| 
+|| Boiling Point   :  -246 °C   			|| 
+|| Uses            :  Neon lights, Lightning arrestor,	||  
+|| 		      TV tubes, Cryogenic Refrigerant	|| 
+==========================================================

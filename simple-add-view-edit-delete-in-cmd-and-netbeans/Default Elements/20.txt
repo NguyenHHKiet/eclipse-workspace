@@ -1,0 +1,13 @@
+__________________________________________________________
+||			  CALCIUM 			||
+==========================================================
+|| Element Name    :  Calcium				|| 
+|| Atomic Symbol   :  Ca 				|| 
+|| Element Group   :  Alkaline Earth Metals  	      	|| 
+|| Atomic Number   :  20 				|| 
+|| Atomic Mass     :  40.078				|| 
+|| Atomic Density  :  1.55 g/cm3			|| 
+|| Melting Point   :  839 °C    			|| 
+|| Boiling Point   :  1484 °C    			|| 
+|| Uses            :  Poland Cement, Medicines, Battery ||
+==========================================================

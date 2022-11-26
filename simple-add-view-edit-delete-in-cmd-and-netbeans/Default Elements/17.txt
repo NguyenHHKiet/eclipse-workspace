@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 CHLORINE 			||
+==========================================================
+|| Element Name    :  Chlorine				|| 
+|| Atomic Symbol   :  Cl				|| 
+|| Element Group   :  Halogens  	          	|| 
+|| Atomic Number   :  17 				|| 
+|| Atomic Mass     :  35.446				|| 
+|| Atomic Density  :  3.214 g/cm3			|| 
+|| Melting Point   :  -110.9 °C    			|| 
+|| Boiling Point   :  -34.6 °C    			|| 
+|| Uses            :  Water Purifier, Paper, Dyes, 	||  
+|| 		      Textile, Antoseptics, Foodstuff	|| 
+==========================================================

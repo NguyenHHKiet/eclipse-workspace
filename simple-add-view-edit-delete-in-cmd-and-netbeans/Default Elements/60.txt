@@ -1,0 +1,13 @@
+__________________________________________________________
+||			NEODYMIUM			||
+==========================================================
+|| Element Name    :  Neodymium				|| 
+|| Atomic Symbol   :  Nd 				|| 
+|| Element Group   :  Lanthanides	  		|| 
+|| Atomic Number   :  60 			 	|| 
+|| Atomic Mass     :  144.24				|| 
+|| Atomic Density  :  7 g/cm3 				|| 
+|| Melting Point   :  1010 °C    			|| 
+|| Boiling Point   :  3127 °C    		 	|| 
+|| Uses            :  Welding googles, Didymium Comp.   ||
+==========================================================

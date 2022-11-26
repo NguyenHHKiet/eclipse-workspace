@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 LUTETIUM			||
+==========================================================
+|| Element Name    :  Lutetium				|| 
+|| Atomic Symbol   :  Lu        			|| 
+|| Element Group   :  Lanthanides	  		|| 
+|| Atomic Number   :  71 			 	|| 
+|| Atomic Mass     :  174.9				|| 
+|| Atomic Density  :  9.84 g/cm3 			|| 
+|| Melting Point   :  1656 °C    			|| 
+|| Boiling Point   :  3315 °C    		 	|| 
+|| Uses            :  Polymerization, Alkylation, 	||
+||		      Hydrogenation			||
+==========================================================

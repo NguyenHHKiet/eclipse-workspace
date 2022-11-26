@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 ANTIMONY	 		||
+==========================================================
+|| Element Name    :  Antimony				|| 
+|| Atomic Symbol   :  Sb 				|| 
+|| Element Group   :  Nitrogen Group		 	|| 
+|| Atomic Number   :  51 			 	|| 
+|| Atomic Mass     :  121.7				|| 
+|| Atomic Density  :  6.62 g/cm3			|| 
+|| Melting Point   :  620.7 °C    			|| 
+|| Boiling Point   :  1750 °C    		 	|| 
+|| Uses            :  Bearing, Batteries, Tracer Bullet	|| 
+||		      Cables, Ceramic Enamels		||
+==========================================================

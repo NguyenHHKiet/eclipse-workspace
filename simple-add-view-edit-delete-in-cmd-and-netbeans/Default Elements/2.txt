@@ -1,0 +1,14 @@
+__________________________________________________________
+||			  HELIUM			||
+==========================================================
+|| Element Name    :  Helium				|| 
+|| Atomic Symbol   :  He				|| 
+|| Element Group   :  Inert Gases			|| 
+|| Atomic Number   :  2					|| 
+|| Atomic Mass     :  4.003				|| 
+|| Atomic Density  :  0.124  g/cm3			|| 
+|| Melting Point   :  -272.2 °C 			|| 
+|| Boiling Point   :  -268.9 °C 			|| 
+|| Uses            :  Balloons, Blimps, Laser, Hydrogen	||  
+|| 		      Bomb, Nuclear Plant coolant	|| 
+==========================================================

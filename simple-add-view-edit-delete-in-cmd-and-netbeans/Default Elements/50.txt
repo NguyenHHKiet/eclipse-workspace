@@ -1,0 +1,14 @@
+__________________________________________________________
+||			   TIN	 			||
+==========================================================
+|| Element Name    :  Tin				|| 
+|| Atomic Symbol   :  Sn 				|| 
+|| Element Group   :  Carbon Group		 	|| 
+|| Atomic Number   :  50 			 	|| 
+|| Atomic Mass     :  118.7				|| 
+|| Atomic Density  :  7.29 g/cm3			|| 
+|| Melting Point   :  232 °C    			|| 
+|| Boiling Point   :  2270 °C    		 	|| 
+|| Uses            :  Cans, Panel lighting, Super	|| 
+||		      Conductive magnets		||
+==========================================================

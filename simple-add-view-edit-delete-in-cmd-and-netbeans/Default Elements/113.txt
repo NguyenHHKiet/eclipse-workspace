@@ -1,0 +1,13 @@
+__________________________________________________________
+||			UNUNTRIUM 			||
+==========================================================
+|| Element Name    :  Ununtrium				|| 
+|| Atomic Symbol   :  Uut         			|| 
+|| Element Group   :  Trasuranium               	|| 
+|| Atomic Number   :  113 			 	|| 
+|| Atomic Mass     :  					|| 
+|| Atomic Density  :  					|| 
+|| Melting Point   :    	  			|| 
+|| Boiling Point   :  		    		 	|| 
+|| Uses            :  					||
+==========================================================

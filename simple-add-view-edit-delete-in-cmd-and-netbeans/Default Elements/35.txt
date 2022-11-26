@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 BROMINE 			||
+==========================================================
+|| Element Name    :  Bromine				|| 
+|| Atomic Symbol   :  Br 				|| 
+|| Element Group   :  Halogens		  	      	|| 
+|| Atomic Number   :  35 				|| 
+|| Atomic Mass     :  79.9				|| 
+|| Atomic Density  :  3.12 g/cm3 			|| 
+|| Melting Point   :  -7.2 °C    			|| 
+|| Boiling Point   :  58.8 °C    			|| 
+|| Uses            :  Photographic Film, Gasoline       || 
+||		      Antiknock, Flame Proofing Agents  ||
+==========================================================

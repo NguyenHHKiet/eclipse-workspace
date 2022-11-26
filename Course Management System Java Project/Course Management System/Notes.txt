@@ -1,0 +1,8 @@
+Hw and completed hw that gets uploaded is located in their respective folders in 
+
+..Final Project\src
+
+or whatever is specified in the web.xml
+
+-Javadoc not used for basic methods like getName get password
+but all other methods are documented

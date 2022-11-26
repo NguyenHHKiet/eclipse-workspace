@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 KRYPTON 			||
+==========================================================
+|| Element Name    :  Krypton				|| 
+|| Atomic Symbol   :  Kr 				|| 
+|| Element Group   :  Inert Gases		       	|| 
+|| Atomic Number   :  36 				|| 
+|| Atomic Mass     :  83.79				|| 
+|| Atomic Density  :  1.67 g/cm3 			|| 
+|| Melting Point   :  -189.7 °C    			|| 
+|| Boiling Point   :  -185.2 °C    			|| 
+|| Uses            :  Flourescent Lamps, Photographic   || 
+||		      Flash lamp, Basis of Mter lenght  ||
+==========================================================

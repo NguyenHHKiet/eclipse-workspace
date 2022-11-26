@@ -1,0 +1,14 @@
+__________________________________________________________
+||			   ARGON 			||
+==========================================================
+|| Element Name    :  Argon				|| 
+|| Atomic Symbol   :  Ar				|| 
+|| Element Group   :  Inert Gases  	          	|| 
+|| Atomic Number   :  18 				|| 
+|| Atomic Mass     :  39.948				|| 
+|| Atomic Density  :  1.65 g/cm3			|| 
+|| Melting Point   :  -189.2 °C    			|| 
+|| Boiling Point   :  -185.7 °C    			|| 
+|| Uses            :  Light Bulbs, Arc welding,  	||  
+|| 		      Flourescent light			|| 
+==========================================================

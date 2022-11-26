@@ -1,0 +1,14 @@
+__________________________________________________________
+||			  MANGANESE 			||
+==========================================================
+|| Element Name    :  Manganese				|| 
+|| Atomic Symbol   :  Mn 				|| 
+|| Element Group   :  Early Tansistion Metals  	      	|| 
+|| Atomic Number   :  25 				|| 
+|| Atomic Mass     :  54.9380				|| 
+|| Atomic Density  :  7.3 g/cm3 			|| 
+|| Melting Point   :  1244 °C    			|| 
+|| Boiling Point   :  1962 °C    			|| 
+|| Uses            :  Dry Cell, Paint Dryer, Medicine	|| 
+||		      Oxidizer, Steel fot Rail switches	||
+==========================================================

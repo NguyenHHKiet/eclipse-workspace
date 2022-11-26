@@ -1,0 +1,20 @@
+How to use Program
+
+1. Copy or Move "Default Elements" Folder to Drive C (C:\)
+
+for CMD Users
+
+	1. type javac Element.java JavaProject.java
+	2. type java JavaProject
+
+	In My Case, It Is On Drive D:
+
+	C:\Users\(your computer name)>d:
+	D:\>javac Element.java JavaProject.java
+	D:\>java JavaProject
+
+for Netbeans Users
+
+	1. Locate the "JavaProject" folder by clicking
+	   "File" then "Open Project" in Netbeans IDE
+	2. Run The Code...

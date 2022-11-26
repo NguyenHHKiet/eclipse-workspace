@@ -1,0 +1,15 @@
+__________________________________________________________
+||			BERYLLIUM			||
+==========================================================
+|| Element Name    :  Beryllium				|| 
+|| Atomic Symbol   :  Be				|| 
+|| Element Group   :  Alkaline Earth Metals		|| 
+|| Atomic Number   :  4					|| 
+|| Atomic Mass     :  9.01218				|| 
+|| Atomic Density  :  1.85  g/cm3			|| 
+|| Melting Point   :  1278 °C   			|| 
+|| Boiling Point   :  2970 °C   			|| 
+|| Uses            :  Watch Springs, Space Shuttle 	||  
+|| 		      Parts, Welding Electrodes, 	||
+||		      X-ray Tubes			|| 
+==========================================================

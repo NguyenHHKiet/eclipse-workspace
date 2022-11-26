@@ -1,0 +1,14 @@
+__________________________________________________________
+||			SILICON 			||
+==========================================================
+|| Element Name    :  Silicon				|| 
+|| Atomic Symbol   :  Si				|| 
+|| Element Group   :  Carbon Group	          	|| 
+|| Atomic Number   :  14 				|| 
+|| Atomic Mass     :  28.084				|| 
+|| Atomic Density  :  2.24 g/cm3			|| 
+|| Melting Point   :  1410 °C    			|| 
+|| Boiling Point   :  2355 °C   			|| 
+|| Uses            :  Solar Cells, Transistors, 	||  
+|| 		      Rectifiers, Lubricants		|| 
+==========================================================

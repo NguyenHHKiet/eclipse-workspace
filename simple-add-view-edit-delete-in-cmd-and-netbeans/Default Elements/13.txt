@@ -1,0 +1,14 @@
+__________________________________________________________
+||			ALUMINUM 			||
+==========================================================
+|| Element Name    :  Aluminum				|| 
+|| Atomic Symbol   :  Al				|| 
+|| Element Group   :  Boron Group	          	|| 
+|| Atomic Number   :  13 				|| 
+|| Atomic Mass     :  26.9815				|| 
+|| Atomic Density  :  2.70 g/cm3			|| 
+|| Melting Point   :  660 °C    			|| 
+|| Boiling Point   :  2467 °C   			|| 
+|| Uses            :  Airplane Parts, Food Wrapper	||  
+|| 		      Glassmaking, Refractories		|| 
+==========================================================

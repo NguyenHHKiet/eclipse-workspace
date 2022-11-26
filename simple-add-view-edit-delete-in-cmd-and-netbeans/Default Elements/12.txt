@@ -1,0 +1,14 @@
+__________________________________________________________
+||			MAGNESIUM 			||
+==========================================================
+|| Element Name    :  Magnesium				|| 
+|| Atomic Symbol   :  Mg				|| 
+|| Element Group   :  Alkaline Earth Metals          	|| 
+|| Atomic Number   :  12 				|| 
+|| Atomic Mass     :  24.3050				|| 
+|| Atomic Density  :  1.74 g/cm3			|| 
+|| Melting Point   :  649 °C    			|| 
+|| Boiling Point   :  1090 °C   			|| 
+|| Uses            :  Bicycle Parts, Bricks for Fumaces	||  
+|| 		      Medicine, Propellants		|| 
+==========================================================

@@ -1,0 +1,14 @@
+__________________________________________________________
+||			MEITNERIUM 			||
+==========================================================
+|| Element Name    :  Meitnerium			|| 
+|| Atomic Symbol   :  Mt         			|| 
+|| Element Group   :  Late Transistion Metals        	|| 
+|| Atomic Number   :  109 			 	|| 
+|| Atomic Mass     :  					|| 
+|| Atomic Density  :  					|| 
+|| Melting Point   :    	  			|| 
+|| Boiling Point   :  		    		 	|| 
+|| Uses            :  Fingerprint Detector, Photograph  ||
+||		      Needle				||
+==========================================================

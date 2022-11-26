@@ -1,0 +1,13 @@
+__________________________________________________________
+||			UNUNSEPTIUM 			||
+==========================================================
+|| Element Name    :  Ununtrium				|| 
+|| Atomic Symbol   :  Uus         			|| 
+|| Element Group   :  Trasuranium               	|| 
+|| Atomic Number   :  117 			 	|| 
+|| Atomic Mass     :  					|| 
+|| Atomic Density  :  					|| 
+|| Melting Point   :    	  			|| 
+|| Boiling Point   :  		    		 	|| 
+|| Uses            :  					||
+==========================================================

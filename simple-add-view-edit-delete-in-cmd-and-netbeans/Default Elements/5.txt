@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 BORON  			||
+==========================================================
+|| Element Name    :  Boron				|| 
+|| Atomic Symbol   :  B 				|| 
+|| Element Group   :  Boron Group       		|| 
+|| Atomic Number   :  5 				|| 
+|| Atomic Mass     :  10.806				|| 
+|| Atomic Density  :  2.35  g/cm3			|| 
+|| Melting Point   :  2300 °C   			|| 
+|| Boiling Point   :  2550 °C   			|| 
+|| Uses            :  Tennis Rackets, Glasses, Artritis ||  
+|| 		      Treatment, Pyrotechnic Flares	|| 
+==========================================================

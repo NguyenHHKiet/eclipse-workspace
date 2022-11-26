@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 RUBIDIUM 			||
+==========================================================
+|| Element Name    :  Rubidium				|| 
+|| Atomic Symbol   :  Rb 				|| 
+|| Element Group   :  Alkali Metals		       	|| 
+|| Atomic Number   :  37 			 	|| 
+|| Atomic Mass     :  85.46				|| 
+|| Atomic Density  :  1.53 g/cm3 			|| 
+|| Melting Point   :  38.9 °C    			|| 
+|| Boiling Point   :  686 °C    		 	|| 
+|| Uses            :  Thermoelectric, Gas Scanverger 	|| 
+||		      in Vacuum, Photocell component    ||
+==========================================================

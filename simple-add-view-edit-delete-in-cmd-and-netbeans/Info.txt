@@ -1,0 +1,28 @@
+==================================================
+||                 Description                  ||
+==================================================
+
+Simple Add, View, Edit, Delete System in Java 
+Compiled in Windows CMD (Command Prompt) and 
+Netbeans IDE
+
+==================================================
+||                  Features                    ||
+==================================================
+
+1. Add, View, Edit, Delete in Java
+2. JOptionPane Notifications
+
+==================================================
+||                    NOTE                      ||
+==================================================
+I Highly Recommend You To Use NetBeans IDE
+Because This Program Is Developed Using Netbeans
+And Has Few Bugs When Compiled Using CMD
+
+==================================================
+||              Special Thanks To:              ||
+==================================================
+Dondon E. Bagasbas
+John Carlo C. Nañoz
+Jayvee Neil SJ. Sias

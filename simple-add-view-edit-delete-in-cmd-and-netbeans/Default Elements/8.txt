@@ -1,0 +1,14 @@
+__________________________________________________________
+||			  OXYGEN			||
+==========================================================
+|| Element Name    :  Oxygen				|| 
+|| Atomic Symbol   :  O 				|| 
+|| Element Group   :  Chalcogens        		|| 
+|| Atomic Number   :  8 				|| 
+|| Atomic Mass     :  15.999				|| 
+|| Atomic Density  :  1.429  g/cm3			|| 
+|| Melting Point   :  -218.4 °C   			|| 
+|| Boiling Point   :  -182.9 °C   			|| 
+|| Uses            :  Airsupply, Oxy-acetylene welding, ||  
+|| 		      Steelmaking agent			|| 
+==========================================================

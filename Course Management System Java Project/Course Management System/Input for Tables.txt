@@ -1,0 +1,31 @@
+COMMIT!!
+
+///////////Admin///////
+
+
+insert into AdministratorAccounts (id, lastname, firstname, username, password) values ('1111', 'Jeter', 'John','bigAdmin', 'password');
+
+insert into AdministratorAccounts (id, lastname, firstname, username, password) values ('1234', 'Thomas', 'Anthony','smallAdmin', 'keyboard');
+
+
+///////////Instructors///////
+
+
+insert into InstructorAccounts (id, lastname, firstname, username, password) values ('2222', 'Davidson', 'John', 'coolguy', 'slim');
+
+insert into InstructorAccounts (id, lastname, firstname, username, password) values ('2345', 'Chandler', 'Steve', 'stevie', 'schand');
+
+
+///////////Students///////
+
+
+insert into studentAccounts (id, lastname, firstname, username, password) values ('3333', 'Sun', 'Peter', 'psun', 'java');
+
+insert into studentAccounts (id, lastname, firstname, username, password) values ('3435', 'Smo', 'Joe', 'jsmo', 'smo');
+
+insert into studentAccounts (id, lastname, firstname, username, password) values ('3892', 'Jones', 'Mindy', 'mjones', 'text');
+
+insert into studentAccounts (id, lastname, firstname, username, password) values ('3342', 'Davids', 'Bobby', 'bdavid', 'knicks');
+
+
+insert into studentAccounts (id, lastname, firstname, username, password) values ('3745', 'Stone', 'Larry', 'lstone', 'rocks');

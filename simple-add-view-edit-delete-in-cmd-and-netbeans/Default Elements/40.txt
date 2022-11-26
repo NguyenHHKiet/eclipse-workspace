@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 ZIRCONIUM 			||
+==========================================================
+|| Element Name    :  Zirconium				|| 
+|| Atomic Symbol   :  Zr 				|| 
+|| Element Group   :  Early Transistion Metals	 	|| 
+|| Atomic Number   :  40 			 	|| 
+|| Atomic Mass     :  91.22				|| 
+|| Atomic Density  :  6.44 g/cm3 			|| 
+|| Melting Point   :  1852 °C    			|| 
+|| Boiling Point   :  4377 °C    		 	|| 
+|| Uses            :  Flash bulbs, Surgical Appliances  || 
+||		      Alloying agent in steel		||
+==========================================================

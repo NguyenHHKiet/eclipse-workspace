@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 SILVER 			||
+==========================================================
+|| Element Name    :  Silver				|| 
+|| Atomic Symbol   :  Ag 				|| 
+|| Element Group   :  Late Transistion Metals	 	|| 
+|| Atomic Number   :  47 			 	|| 
+|| Atomic Mass     :  107.86				|| 
+|| Atomic Density  :  10.49 g/cm3			|| 
+|| Melting Point   :  961 °C    			|| 
+|| Boiling Point   :  2212.2 °C    		 	|| 
+|| Uses            :  Utensils, Jewelries, Coins, Medal || 
+||		      Photographic Material		||
+==========================================================

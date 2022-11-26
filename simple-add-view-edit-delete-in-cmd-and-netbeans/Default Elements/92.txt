@@ -1,0 +1,14 @@
+__________________________________________________________
+||			  URANIUM 			||
+==========================================================
+|| Element Name    :  Uranium				|| 
+|| Atomic Symbol   :  U         			|| 
+|| Element Group   :  Actinides         	  	|| 
+|| Atomic Number   :  92 			 	|| 
+|| Atomic Mass     :  190.23				|| 
+|| Atomic Density  :  22.5 g/cm3 			|| 
+|| Melting Point   :  3045 °C    			|| 
+|| Boiling Point   :  5027 °C    		 	|| 
+|| Uses            :  Fingerprint Detector, Photograph  ||
+||		      Needle				||
+==========================================================

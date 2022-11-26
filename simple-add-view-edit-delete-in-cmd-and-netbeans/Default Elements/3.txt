@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 LITHIUM			||
+==========================================================
+|| Element Name    :  Helium				|| 
+|| Atomic Symbol   :  Li				|| 
+|| Element Group   :  Alkali Metals			|| 
+|| Atomic Number   :  3					|| 
+|| Atomic Mass     :  6.938				|| 
+|| Atomic Density  :  0.534  g/cm3			|| 
+|| Melting Point   :  180.5 °C  			|| 
+|| Boiling Point   :  1342 °C   			|| 
+|| Uses            :  Lubricants, Dry Cells, Storage	||  
+|| 		      Batteries, Glass, Pharmaceuticals	|| 
+==========================================================

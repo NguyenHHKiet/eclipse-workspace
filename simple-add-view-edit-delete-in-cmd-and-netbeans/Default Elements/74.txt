@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 TUNGSTEN			||
+==========================================================
+|| Element Name    :  Tunsten				|| 
+|| Atomic Symbol   :  W         			|| 
+|| Element Group   :  Early Transistion Metals	  	|| 
+|| Atomic Number   :  74 			 	|| 
+|| Atomic Mass     :  183.84				|| 
+|| Atomic Density  :  16.93 g/cm3 			|| 
+|| Melting Point   :  3410 °C    			|| 
+|| Boiling Point   :  5660 °C    		 	|| 
+|| Uses            :  Lamp Filaments, High Speed Tools  ||
+||		      Spacecrafts, Lubricant, Paint	||
+==========================================================

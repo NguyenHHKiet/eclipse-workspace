@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 MOLYBDENUM 			||
+==========================================================
+|| Element Name    :  Molybdenum			|| 
+|| Atomic Symbol   :  Mo 				|| 
+|| Element Group   :  Early Transistion Metals	 	|| 
+|| Atomic Number   :  42 			 	|| 
+|| Atomic Mass     :  95.96				|| 
+|| Atomic Density  :  9.01 g/cm3 			|| 
+|| Melting Point   :  2617 °C    			|| 
+|| Boiling Point   :  4612 °C    		 	|| 
+|| Uses            :  Radar Structural parts, Electrode || 
+||		      Missile parts, Filament, Lubricant||
+==========================================================

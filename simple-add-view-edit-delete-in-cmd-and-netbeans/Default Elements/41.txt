@@ -1,0 +1,14 @@
+__________________________________________________________
+||			 NIOBIUM 			||
+==========================================================
+|| Element Name    :  Niobium				|| 
+|| Atomic Symbol   :  Nb 				|| 
+|| Element Group   :  Early Transistion Metals	 	|| 
+|| Atomic Number   :  41 			 	|| 
+|| Atomic Mass     :  92.901				|| 
+|| Atomic Density  :  8.66 g/cm3 			|| 
+|| Melting Point   :  2468 °C    			|| 
+|| Boiling Point   :  4742 °C    		 	|| 
+|| Uses            :  Welding rods, Air Frames system   || 
+||		      Superconductive Magnet		||
+==========================================================
