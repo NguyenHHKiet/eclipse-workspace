@@ -26,8 +26,8 @@
     <!--
     <Manager pathname="" />
     -->
-    
-    <Resource 
+    <Resources cachingAllowed="true" cacheMaxSize="20480"></Resources>
+    <!-- <Resource 
     	name="jdbc/mysql"
     	auth="Container"
     	type="javax.sql.DataSource"
@@ -37,5 +37,5 @@
     	password=""
     	maxTotal="50"
     	maxWaitMillis="1000"
-    />
+    /> -->
 </Context>
