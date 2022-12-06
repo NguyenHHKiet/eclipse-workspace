@@ -52,15 +52,22 @@ public class ConnectionSQL {
 			// Create and execute a Update SQL statement.
 			stmt = connection.createStatement();
 			stmt.executeUpdate(
-					"create table if not exists employee(id int not null,name varchar(25) not null,salary float(10,3) default '0',contact_no bigint(11) not null,email_id varchar(25) not null,totolSalaryBonus float(20,3) default '0',PRIMARY KEY(id))");
+					"create table if not exists department(id int not null,name varchar(25) not null,PRIMARY KEY(id))");
 
 			stmt.executeUpdate(
-					"create table if not exists project(id int not null,name varchar(25) not null,totalInvestment float(20,3) default '0',name_leader varchar(25) not null,count int default '5',PRIMARY KEY(id ) )");
+					"create table if not exists employee(id int not null,name varchar(25) not null,salary float(10,3) default '0',contact_no bigint(11) not null,email_id varchar(25) not null,totolSalaryBonus float(20,3) default '0',dateOfBirth int not null,department_id int not null,PRIMARY KEY(id)"
+							+ ",FOREIGN KEY(department_id) REFERENCES department(id))");
+
+			stmt.executeUpdate(
+					"create table if not exists project(id int not null,name varchar(25) not null,totalInvestment float(20,3) default '0',name_leader varchar(25) not null,count int default '10',PRIMARY KEY(id ) )");
 
 			stmt.executeUpdate(
 					"create table if not exists orderProject(id int not null,bonus float(10,3) default '0',employee_id int not null,project_id int not null, PRIMARY KEY(id )"
 							+ ",FOREIGN KEY(employee_id) REFERENCES employee(id)"
 							+ ",FOREIGN KEY(project_id) REFERENCES project(id))");
+			stmt.executeUpdate(
+					"create table if not exists relative(id int not null,nameRelative varchar(25) not null, phone varchar(25),employee_id int not null, PRIMARY KEY(id )"
+							+ ",FOREIGN KEY(employee_id) REFERENCES employee(id))");
 
 			System.out.println("Database connected!");
 		} catch (Exception e) {

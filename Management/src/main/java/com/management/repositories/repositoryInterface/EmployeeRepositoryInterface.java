@@ -11,6 +11,8 @@ public interface EmployeeRepositoryInterface {
 
 	void AddEmployee(ConnectionSQL conn);
 
+	void AddRelative(ConnectionSQL conn);
+
 	void SearchEmployee(ConnectionSQL conn);
 
 	void EditEmployee(ConnectionSQL conn);
@@ -18,4 +20,14 @@ public interface EmployeeRepositoryInterface {
 	void DeleteEmployee(ConnectionSQL conn);
 
 	void DisplayAllEmployees(ConnectionSQL conn);
+
+	void SearchEmployeeBaseName(ConnectionSQL conn);
+
+	void SearchEmployeeBaseBirth(ConnectionSQL conn);
+
+	void SearchEmployeeBaseDepartment(ConnectionSQL conn);
+	
+	void SearchFromToYearOld(ConnectionSQL conn);
+	
+	void DisplayRelativeBaseEmployee(ConnectionSQL conn);
 }

@@ -214,4 +214,10 @@ public class ProjectRepository implements ProjectRepositoryInterface {
 		}
 	}
 
+	@Override
+	public void DisplaySrotInvestment(ConnectionSQL conn) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

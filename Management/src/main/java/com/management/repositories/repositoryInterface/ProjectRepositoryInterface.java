@@ -18,4 +18,6 @@ public interface ProjectRepositoryInterface {
 	void DeleteProject(ConnectionSQL conn);
 
 	void DisplayAllProjects(ConnectionSQL conn);
+
+	void DisplaySrotInvestment(ConnectionSQL conn);
 }

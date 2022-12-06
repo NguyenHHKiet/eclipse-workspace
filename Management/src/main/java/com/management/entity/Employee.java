@@ -8,8 +8,11 @@ public class Employee {
 	private long contact_no;
 	private String email_id;
 	private float totolSalaryBonus;
+	private int dateOfBirth;
+	private int department_id;
 
-	public Employee(int id, String name, float salary, long contact_no, String email_id, float totolSalaryBonus) {
+	public Employee(int id, String name, float salary, long contact_no, String email_id, float totolSalaryBonus,
+			int dataOfBirth) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -17,11 +20,28 @@ public class Employee {
 		this.contact_no = contact_no;
 		this.email_id = email_id;
 		this.totolSalaryBonus = totolSalaryBonus;
+		this.dateOfBirth = dataOfBirth;
 	}
 
 	public Employee() {
 		super();
 		// TODO Auto-generated constructor stub
+	}
+
+	public int getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(int dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+
+	public int getDepartment_id() {
+		return department_id;
+	}
+
+	public void setDepartment_id(int department_id) {
+		this.department_id = department_id;
 	}
 
 	public int getId() {
