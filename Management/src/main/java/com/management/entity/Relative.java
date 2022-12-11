@@ -5,24 +5,18 @@ public class Relative {
 	private int id;
 	private String name;
 	private String phone;
-	private int employee_id;
+	private Employee employee;
 
 	public Relative() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Relative(int id, String name, String phone, int employee_id) {
+	public Relative(int id, String name, String phone) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.phone = phone;
-		this.employee_id = employee_id;
-	}
-
-	@Override
-	public String toString() {
-		return "Relative [id=" + id + ", name=" + name + ", phone=" + phone + ", employee_id=" + employee_id + "]";
 	}
 
 	public int getId() {
@@ -49,12 +43,11 @@ public class Relative {
 		this.phone = phone;
 	}
 
-	public int getEmployee_id() {
-		return employee_id;
+	public int getEmployee() {
+		return employee.getId();
 	}
 
-	public void setEmployee_id(int employee_id) {
-		this.employee_id = employee_id;
+	public void setEmployee(int id) {
+		this.employee.setId(id);
 	}
-
 }

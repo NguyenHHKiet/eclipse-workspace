@@ -11,7 +11,7 @@ import com.management.entity.Project;
 import com.management.repositories.repositoryInterface.OrderProjectRepositoryInterface;
 
 public class OrderProjectRepository implements OrderProjectRepositoryInterface {
-	OrderProject emp = new OrderProject(0, 0, 0, 0);
+	OrderProject emp = new OrderProject(0, 0);
 	Scanner sc = new Scanner(System.in);
 
 	@Override
@@ -82,19 +82,19 @@ public class OrderProjectRepository implements OrderProjectRepositoryInterface {
 		emp.setId(sc.nextInt());
 		emp.setBonus(0);
 		System.out.println("Enter Employee Id :");
-		emp.setEmployee_id(sc.nextInt());
+		emp.setEmployee(sc.nextInt());
 		System.out.println("Enter Project Id :");
-		emp.setProject_id(sc.nextInt());
+		emp.setProject(sc.nextInt());
 
 		try {
 			conn.prestatement.setInt(1, emp.getId());
 			conn.prestatement.setFloat(2, emp.getBonus());
-			conn.prestatement.setInt(3, emp.getEmployee_id());
-			conn.prestatement.setInt(4, emp.getProject_id());
+			conn.prestatement.setInt(3, emp.getEmployee());
+			conn.prestatement.setInt(4, emp.getProject());
 			conn.prestatement.executeUpdate();
 			// In this sample, connect to SQL Database, execute a SELECT statement, and
 			// return selected rows.
-			conn.stmt.executeUpdate("UPDATE project SET count = count - 1 where id =" + emp.getProject_id());
+			conn.stmt.executeUpdate("UPDATE project SET count = count - 1 where id =" + emp.getProject());
 			conn.rs = conn.stmt.executeQuery("select * from orderProject");
 			display(conn.rs);
 		} catch (SQLException e) {
@@ -158,16 +158,14 @@ public class OrderProjectRepository implements OrderProjectRepositoryInterface {
 			conn.rs = conn.stmt.executeQuery("select * from orderproject");
 			while (conn.rs.next()) {
 				if (emp.getId() == conn.rs.getInt(1)) {
-					int id=conn.rs.getInt(3);
+					int id = conn.rs.getInt(3);
 					conn.rs = conn.stmt
 							.executeQuery("SELECT sum(bonus) as sum_bonus, salary FROM orderproject, employee \r\n"
-									+ "where orderproject.employee_id = employee.id and employee_id="
-									+ id);
+									+ "where orderproject.employee_id = employee.id and employee_id=" + id);
 					// Before start of result set
 					if (conn.rs.next()) {
 						conn.stmt.executeUpdate("UPDATE employee SET totolSalaryBonus = "
-								+ (conn.rs.getInt("sum_bonus") + conn.rs.getInt("salary")) + " where id ="
-								+ id);
+								+ (conn.rs.getInt("sum_bonus") + conn.rs.getInt("salary")) + " where id =" + id);
 						i++;
 					}
 				}

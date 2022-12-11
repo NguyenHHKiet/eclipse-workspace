@@ -1,24 +1,28 @@
 package com.management.entity;
 
+import java.util.List;
+
 public class Employee {
 
 	private int id;
 	private String name;
 	private float salary;
-	private long contact_no;
-	private String email_id;
+	private long contactNo;
+	private String emailId;
 	private float totolSalaryBonus;
 	private int dateOfBirth;
-	private int department_id;
+	private Department department = new Department();
+	private List<OrderProject> orderprojects;
+	private List<Relative> relatives;
 
-	public Employee(int id, String name, float salary, long contact_no, String email_id, float totolSalaryBonus,
+	public Employee(int id, String name, float salary, long contactNo, String emailId, float totolSalaryBonus,
 			int dataOfBirth) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.salary = salary;
-		this.contact_no = contact_no;
-		this.email_id = email_id;
+		this.contactNo = contactNo;
+		this.emailId = emailId;
 		this.totolSalaryBonus = totolSalaryBonus;
 		this.dateOfBirth = dataOfBirth;
 	}
@@ -34,14 +38,6 @@ public class Employee {
 
 	public void setDateOfBirth(int dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
-	}
-
-	public int getDepartment_id() {
-		return department_id;
-	}
-
-	public void setDepartment_id(int department_id) {
-		this.department_id = department_id;
 	}
 
 	public int getId() {
@@ -68,20 +64,20 @@ public class Employee {
 		this.salary = salary;
 	}
 
-	public long getContact_no() {
-		return contact_no;
+	public long getContactNo() {
+		return contactNo;
 	}
 
-	public void setContact_no(long contact_no) {
-		this.contact_no = contact_no;
+	public void setContactNo(long contactNo) {
+		this.contactNo = contactNo;
 	}
 
-	public String getEmail_id() {
-		return email_id;
+	public String getEmailId() {
+		return emailId;
 	}
 
-	public void setEmail_id(String email_id) {
-		this.email_id = email_id;
+	public void setEmailId(String emailId) {
+		this.emailId = emailId;
 	}
 
 	public float getTotolSalaryBonus() {
@@ -90,6 +86,30 @@ public class Employee {
 
 	public void setTotolSalaryBonus(float totolSalaryBonus) {
 		this.totolSalaryBonus = totolSalaryBonus;
+	}
+
+	public int getDepartment() {
+		return department.getId();
+	}
+
+	public void setDepartment(int id) {
+		this.department.setId(id);
+	}
+
+	public List<OrderProject> getOrderprojects() {
+		return orderprojects;
+	}
+
+	public void setOrderprojects(List<OrderProject> orderprojects) {
+		this.orderprojects = orderprojects;
+	}
+
+	public List<Relative> getRelatives() {
+		return relatives;
+	}
+
+	public void setRelatives(List<Relative> relatives) {
+		this.relatives = relatives;
 	}
 
 }

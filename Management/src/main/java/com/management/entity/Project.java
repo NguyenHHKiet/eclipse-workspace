@@ -1,24 +1,27 @@
 package com.management.entity;
 
+import java.util.List;
+
 public class Project {
 
 	private int id;
 	private String name;
 	private float totalInvestment;
-	private String name_leader;
+	private String nameLeader;
 	private int count;
+	private List<OrderProject> orderprojects;
 
 	public Project() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Project(int id, String name, float totalInvestment, String name_leader, int count) {
+	public Project(int id, String name, float totalInvestment, String nameLeader, int count) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.totalInvestment = totalInvestment;
-		this.name_leader = name_leader;
+		this.nameLeader = nameLeader;
 		this.count = count;
 	}
 
@@ -54,12 +57,20 @@ public class Project {
 		this.totalInvestment = totalInvestment;
 	}
 
-	public String getName_leader() {
-		return name_leader;
+	public String getNameLeader() {
+		return nameLeader;
 	}
 
-	public void setName_leader(String name_leader) {
-		this.name_leader = name_leader;
+	public void setNameLeader(String nameLeader) {
+		this.nameLeader = nameLeader;
+	}
+
+	public List<OrderProject> getOrderprojects() {
+		return orderprojects;
+	}
+
+	public void setOrderprojects(List<OrderProject> orderprojects) {
+		this.orderprojects = orderprojects;
 	}
 
 }

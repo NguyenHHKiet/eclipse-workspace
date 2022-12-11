@@ -1,8 +1,11 @@
 package com.management.entity;
 
+import java.util.List;
+
 public class Department {
 	private int id;
 	private String name;
+	private List<Employee> employees;
 
 	public Department(int id, String name) {
 		super();
@@ -29,6 +32,14 @@ public class Department {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public List<Employee> getEmployees() {
+		return employees;
+	}
+
+	public void setEmployees(List<Employee> employees) {
+		this.employees = employees;
 	}
 
 }

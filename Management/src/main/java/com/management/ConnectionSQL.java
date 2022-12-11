@@ -41,7 +41,7 @@ public class ConnectionSQL {
 
 		try {
 			System.out.println("Loading driver...");
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			// Connect to your database.
 			// Replace server name, username, and password with your credentials
 			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/management", "root", "");

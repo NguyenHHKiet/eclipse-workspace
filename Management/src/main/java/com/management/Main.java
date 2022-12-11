@@ -66,7 +66,7 @@ public class Main {
 			case 2:
 				System.out.println("1). Add Project to the DataBase\n" + "2). Search for Project\n"
 						+ "3). Edit Project details\n" + "4). Delete Project Details\n"
-						+ "5). Display all Project working in this company\n" +"6). Sort Investment(decrease)"
+						+ "5). Display all Project working in this company\n" +"6). Sort Investment(decrease)\n"
 						+ "7). Go Back\n" + "8). EXIT\n");
 				System.out.println("Enter your choice : ");
 				int p = sc.nextInt();

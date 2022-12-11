@@ -63,14 +63,14 @@ public class ProjectRepository implements ProjectRepositoryInterface {
 		System.out.println("Enter Total Investment :");
 		emp.setTotalInvestment(sc.nextFloat());
 		System.out.println("Enter Leader Name :");
-		emp.setName_leader(sc.next());
+		emp.setNameLeader(sc.next());
 		emp.setCount(5);
 
 		try {
 			conn.prestatement.setInt(1, emp.getId());
 			conn.prestatement.setString(2, emp.getName());
 			conn.prestatement.setFloat(3, emp.getTotalInvestment());
-			conn.prestatement.setString(4, emp.getName_leader());
+			conn.prestatement.setString(4, emp.getNameLeader());
 			conn.prestatement.setInt(5, emp.getCount());
 			conn.prestatement.executeUpdate();
 			conn.rs = conn.stmt.executeQuery("select * from project");
@@ -195,7 +195,6 @@ public class ProjectRepository implements ProjectRepositoryInterface {
 			}
 		} catch (Exception e1) {
 			e1.printStackTrace();
-
 		}
 		if (k == 0) {
 			System.out.println("\nProject Details are not available, Please enter a valid ID!!");
@@ -209,7 +208,6 @@ public class ProjectRepository implements ProjectRepositoryInterface {
 			conn.rs = conn.stmt.executeQuery("select * from project");
 			this.display(conn.rs);
 		} catch (SQLException e) {
-
 			e.printStackTrace();
 		}
 	}
@@ -217,7 +215,12 @@ public class ProjectRepository implements ProjectRepositoryInterface {
 	@Override
 	public void DisplaySrotInvestment(ConnectionSQL conn) {
 		// TODO Auto-generated method stub
-		
+		try {
+			conn.rs = conn.stmt.executeQuery("SELECT * FROM project ORDER BY totalInvestment DESC;");
+			display(conn.rs);
+		} catch (Exception e1) {
+			e1.printStackTrace();
+		}
 	}
 
 }

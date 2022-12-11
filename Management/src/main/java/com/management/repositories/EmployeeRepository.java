@@ -68,23 +68,23 @@ public class EmployeeRepository implements EmployeeRepositoryInterface {
 		System.out.println("Enter Salary :");
 		emp.setSalary(sc.nextFloat());
 		System.out.println("Enter Contact No :");
-		emp.setContact_no(sc.nextLong());
+		emp.setContactNo(sc.nextLong());
 		System.out.println("Enter Email-ID :");
-		emp.setEmail_id(sc.next());
+		emp.setEmailId(sc.next());
 		emp.setTotolSalaryBonus(emp.getSalary());
 		System.out.println("Enter year old :");
 		emp.setDateOfBirth(sc.nextInt());
 		System.out.println("Enter Department-Id own :");
-		emp.setDepartment_id(sc.nextInt());
+		emp.setDepartment(sc.nextInt());
 		try {
 			conn.prestatement.setInt(1, emp.getId());
 			conn.prestatement.setString(2, emp.getName());
 			conn.prestatement.setFloat(3, emp.getSalary());
-			conn.prestatement.setLong(4, emp.getContact_no());
-			conn.prestatement.setString(5, emp.getEmail_id());
+			conn.prestatement.setLong(4, emp.getContactNo());
+			conn.prestatement.setString(5, emp.getEmailId());
 			conn.prestatement.setFloat(6, emp.getTotolSalaryBonus());
 			conn.prestatement.setInt(7, emp.getDateOfBirth());
-			conn.prestatement.setInt(8, emp.getDepartment_id());
+			conn.prestatement.setInt(8, emp.getDepartment());
 			conn.prestatement.executeUpdate();
 			// In this sample, connect to SQL Database, execute a SELECT statement, and
 			// return selected rows.
@@ -278,12 +278,12 @@ public class EmployeeRepository implements EmployeeRepositoryInterface {
 		System.out.println("Enter Contact No :");
 		rel.setPhone(sc.next());
 		System.out.println("Enter Employee-ID :");
-		rel.setEmployee_id(sc.nextInt());
+		rel.setEmployee(sc.nextInt());
 		try {
 			conn.prestatement.setInt(1, rel.getId());
 			conn.prestatement.setString(2, rel.getName());
 			conn.prestatement.setString(3, rel.getPhone());
-			conn.prestatement.setInt(4, rel.getEmployee_id());
+			conn.prestatement.setInt(4, rel.getEmployee());
 			conn.prestatement.executeUpdate();
 			// In this sample, connect to SQL Database, execute a SELECT statement, and
 			// return selected rows.
@@ -342,12 +342,12 @@ public class EmployeeRepository implements EmployeeRepositoryInterface {
 	public void SearchEmployeeBaseDepartment(ConnectionSQL conn) {
 		// TODO Auto-generated method stub
 		System.out.println("Enter the Employee's Department-Id to search :");
-		emp.setDepartment_id(sc.nextInt());
+		emp.setDepartment(sc.nextInt());
 		int i = 0;
 		try {
 			conn.rs = conn.stmt.executeQuery("select * from employee");
 			while (conn.rs.next()) {
-				if (emp.getDepartment_id() == conn.rs.getInt(8)) {
+				if (emp.getDepartment() == conn.rs.getInt(8)) {
 					this.show(conn.rs);
 					i++;
 				}
