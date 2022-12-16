@@ -2,6 +2,8 @@ package com.management;
 
 import java.util.Scanner;
 
+import com.management.entity.Employee;
+import com.management.entity.Project;
 import com.management.repositories.DepartmentRepository;
 import com.management.repositories.EmployeeRepository;
 import com.management.repositories.OrderProjectRepository;
@@ -16,6 +18,15 @@ public class Main {
 		OrderProjectRepository repoOrder = new OrderProjectRepository();
 		DepartmentRepository repoDep = new DepartmentRepository();
 		Scanner sc = new Scanner(System.in);
+		
+		Project pr1 = new Project(5, "OPP", 15000, "HK", 10);
+		Employee emp1 = new Employee(5, "ASV", 200, 0164, "mail.com", 5000, 22);
+		Employee emp2 = new Employee(5, "ASV", 200, 0164, "mail.com", 5000, 22);
+		
+		System.out.println(pr1.getName());
+		System.out.println(emp1.getName());
+		System.out.println(emp2.getName());
+		
 		conn.SQl();
 		do {
 			System.out.println("\n*********Welcome to the Management System**********\n");
