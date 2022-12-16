@@ -47,7 +47,7 @@ public class ProjectRepository implements ProjectRepositoryInterface {
 	}
 
 	@Override
-	public void AddProject(ConnectionSQL conn) {
+	public void add(ConnectionSQL conn) {
 		// TODO Auto-generated method stub
 		try {
 			conn.prestatement = conn.connection.prepareStatement("insert into project values(?,?,?,?,?)");
@@ -82,7 +82,7 @@ public class ProjectRepository implements ProjectRepositoryInterface {
 	}
 
 	@Override
-	public void SearchProject(ConnectionSQL conn) {
+	public void search(ConnectionSQL conn) {
 		// TODO Auto-generated method stub
 		System.out.println("Enter the Project ID to search :");
 		emp.setId(sc.nextInt());
@@ -106,7 +106,7 @@ public class ProjectRepository implements ProjectRepositoryInterface {
 	}
 
 	@Override
-	public void EditProject(ConnectionSQL conn) {
+	public void edit(ConnectionSQL conn) {
 		// TODO Auto-generated method stub
 		System.out.println("\nEnter the Project ID to EDIT the details");
 		emp.setId(sc.nextInt());
@@ -178,7 +178,7 @@ public class ProjectRepository implements ProjectRepositoryInterface {
 	}
 
 	@Override
-	public void DeleteProject(ConnectionSQL conn) {
+	public void delete(ConnectionSQL conn) {
 		// TODO Auto-generated method stub
 		System.out.println("\nEnter Project ID to DELETE from the Databse :");
 		emp.setId(sc.nextInt());
@@ -202,7 +202,7 @@ public class ProjectRepository implements ProjectRepositoryInterface {
 	}
 
 	@Override
-	public void DisplayAllProjects(ConnectionSQL conn) {
+	public void displayAll(ConnectionSQL conn) {
 		// TODO Auto-generated method stub
 		try {
 			conn.rs = conn.stmt.executeQuery("select * from project");

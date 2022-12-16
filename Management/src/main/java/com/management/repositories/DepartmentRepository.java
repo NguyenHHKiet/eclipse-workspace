@@ -41,7 +41,7 @@ public class DepartmentRepository implements DepartmentRepositoryInterface {
 	}
 
 	@Override
-	public void AddDepartment(ConnectionSQL conn) {
+	public void add(ConnectionSQL conn) {
 		// TODO Auto-generated method stub
 		try {
 			conn.prestatement = conn.connection.prepareStatement("insert into department values(?,?)");
@@ -70,7 +70,7 @@ public class DepartmentRepository implements DepartmentRepositoryInterface {
 	}
 
 	@Override
-	public void DisplayDepartment(ConnectionSQL conn) {
+	public void displayAll(ConnectionSQL conn) {
 		// TODO Auto-generated method stub
 		try {
 			conn.rs = conn.stmt.executeQuery("select * from department");
@@ -79,6 +79,24 @@ public class DepartmentRepository implements DepartmentRepositoryInterface {
 
 			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public void search(ConnectionSQL conn) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void edit(ConnectionSQL conn) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(ConnectionSQL conn) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

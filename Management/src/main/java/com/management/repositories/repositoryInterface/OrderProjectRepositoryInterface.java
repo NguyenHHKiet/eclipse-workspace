@@ -1,15 +1,8 @@
 package com.management.repositories.repositoryInterface;
 
-import java.sql.ResultSet;
-
 import com.management.ConnectionSQL;
 
-public interface OrderProjectRepositoryInterface {
-	void display(ResultSet rs);
-
-	void showOrderProject(ResultSet rs);
-
-	void SearchOrderProject(ConnectionSQL conn);
+public interface OrderProjectRepositoryInterface extends CRUDRepository {
 
 	void SetupOrderProject(ConnectionSQL conn);
 
@@ -19,5 +12,4 @@ public interface OrderProjectRepositoryInterface {
 
 	void UpdateBonusEmployee(ConnectionSQL conn);
 
-	void DisplayAll(ConnectionSQL conn);
 }

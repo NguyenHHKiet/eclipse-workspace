@@ -8,13 +8,13 @@ import com.management.repositories.OrderProjectRepository;
 import com.management.repositories.ProjectRepository;
 
 public class Main {
-	static ConnectionSQL conn = new ConnectionSQL();
-	static EmployeeRepository repoEmp = new EmployeeRepository();
-	static ProjectRepository repoPro = new ProjectRepository();
-	static OrderProjectRepository repoOrder = new OrderProjectRepository();
-	static DepartmentRepository repoDep = new DepartmentRepository();
 
 	public static void main(String[] args) {
+		ConnectionSQL conn = new ConnectionSQL();
+		EmployeeRepository repoEmp = new EmployeeRepository();
+		ProjectRepository repoPro = new ProjectRepository();
+		OrderProjectRepository repoOrder = new OrderProjectRepository();
+		DepartmentRepository repoDep = new DepartmentRepository();
 		Scanner sc = new Scanner(System.in);
 		conn.SQl();
 		do {
@@ -35,19 +35,19 @@ public class Main {
 				int ch = sc.nextInt();
 				switch (ch) {
 				case 1:
-					repoEmp.AddEmployee(conn);
+					repoEmp.add(conn);
 					break;
 				case 2:
-					repoEmp.SearchEmployee(conn);
+					repoEmp.search(conn);
 					break;
 				case 3:
-					repoEmp.EditEmployee(conn);
+					repoEmp.edit(conn);
 					break;
 				case 4:
-					repoEmp.DeleteEmployee(conn);
+					repoEmp.delete(conn);
 					break;
 				case 5:
-					repoEmp.DisplayAllEmployees(conn);
+					repoEmp.displayAll(conn);
 					break;
 				case 6:
 					repoEmp.AddRelative(conn);
@@ -64,28 +64,28 @@ public class Main {
 				}
 				break;
 			case 2:
-				System.out.println("1). Add Project to the DataBase\n" + "2). Search for Project\n"
-						+ "3). Edit Project details\n" + "4). Delete Project Details\n"
-						+ "5). Display all Project working in this company\n" +"6). Sort Investment(decrease)\n"
-						+ "7). Go Back\n" + "8). EXIT\n");
+				System.out.println(
+						"1). Add Project to the DataBase\n" + "2). Search for Project\n" + "3). Edit Project details\n"
+								+ "4). Delete Project Details\n" + "5). Display all Project working in this company\n"
+								+ "6). Sort Investment(decrease)\n" + "7). Go Back\n" + "8). EXIT\n");
 				System.out.println("Enter your choice : ");
 				int p = sc.nextInt();
 
 				switch (p) {
 				case 1:
-					repoPro.AddProject(conn);
+					repoPro.add(conn);
 					break;
 				case 2:
-					repoPro.SearchProject(conn);
+					repoPro.search(conn);
 					break;
 				case 3:
-					repoPro.EditProject(conn);
+					repoPro.edit(conn);
 					break;
 				case 4:
-					repoPro.DeleteProject(conn);
+					repoPro.delete(conn);
 					break;
 				case 5:
-					repoPro.DisplayAllProjects(conn);
+					repoPro.displayAll(conn);
 					break;
 				case 6:
 					repoPro.DisplaySrotInvestment(conn);
@@ -122,10 +122,10 @@ public class Main {
 					repoOrder.UpdateBonusEmployee(conn);
 					break;
 				case 5:
-					repoOrder.SearchOrderProject(conn);
+					repoOrder.search(conn);
 					break;
 				case 6:
-					repoOrder.DisplayAll(conn);
+					repoOrder.displayAll(conn);
 					break;
 				case 7:
 					sc.close();
@@ -167,10 +167,10 @@ public class Main {
 				int dep = sc.nextInt();
 				switch (dep) {
 				case 1:
-					repoDep.AddDepartment(conn);
+					repoDep.add(conn);
 					break;
 				case 2:
-					repoDep.DisplayDepartment(conn);
+					repoDep.displayAll(conn);
 					break;
 				default:
 					break;

@@ -52,7 +52,7 @@ public class EmployeeRepository implements EmployeeRepositoryInterface {
 	}
 
 	@Override
-	public void AddEmployee(ConnectionSQL conn) {
+	public void add(ConnectionSQL conn) {
 		// TODO Auto-generated method stub
 		try {
 			conn.prestatement = conn.connection.prepareStatement("insert into employee values(?,?,?,?,?,?,?,?)");
@@ -97,7 +97,7 @@ public class EmployeeRepository implements EmployeeRepositoryInterface {
 	}
 
 	@Override
-	public void SearchEmployee(ConnectionSQL conn) {
+	public void search(ConnectionSQL conn) {
 		// TODO Auto-generated method stub
 		System.out.println("Enter the Employee ID to search :");
 		emp.setId(sc.nextInt());
@@ -119,7 +119,7 @@ public class EmployeeRepository implements EmployeeRepositoryInterface {
 	}
 
 	@Override
-	public void EditEmployee(ConnectionSQL conn) {
+	public void edit(ConnectionSQL conn) {
 		// TODO Auto-generated method stub
 		System.out.println("\nEnter the Employee ID to EDIT the details");
 		emp.setId(sc.nextInt());
@@ -211,7 +211,7 @@ public class EmployeeRepository implements EmployeeRepositoryInterface {
 	}
 
 	@Override
-	public void DeleteEmployee(ConnectionSQL conn) {
+	public void delete(ConnectionSQL conn) {
 		// TODO Auto-generated method stub
 		System.out.println("\nEnter Employee ID to DELETE from the Databse :");
 		emp.setId(sc.nextInt());
@@ -236,7 +236,7 @@ public class EmployeeRepository implements EmployeeRepositoryInterface {
 	}
 
 	@Override
-	public void DisplayAllEmployees(ConnectionSQL conn) {
+	public void displayAll(ConnectionSQL conn) {
 		// TODO Auto-generated method stub
 		try {
 			conn.rs = conn.stmt.executeQuery("select * from employee");

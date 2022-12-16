@@ -30,7 +30,7 @@ public class OrderProjectRepository implements OrderProjectRepositoryInterface {
 	}
 
 	@Override
-	public void showOrderProject(ResultSet rs) {
+	public void show(ResultSet rs) {
 		// TODO Auto-generated method stub
 		try {
 			System.out.println("\nOrderProject Details :" + "\nID: " + rs.getObject(1).toString() + "\nBonus: "
@@ -42,7 +42,7 @@ public class OrderProjectRepository implements OrderProjectRepositoryInterface {
 		}
 	}
 
-	public void show(ResultSet rs, String type) {
+	public void showType(ResultSet rs, String type) {
 		// TODO Auto-generated method stub
 		try {
 			if (type == "Employee") {
@@ -113,7 +113,7 @@ public class OrderProjectRepository implements OrderProjectRepositoryInterface {
 		try {
 			conn.rs = conn.stmt.executeQuery("select employee.* from orderproject inner join employee\r\n"
 					+ "on orderproject.employee_id = employee.id\r\n" + "and project_id=" + ae.getId());
-			this.show(conn.rs, type);
+			this.showType(conn.rs, type);
 			i++;
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -134,7 +134,7 @@ public class OrderProjectRepository implements OrderProjectRepositoryInterface {
 		try {
 			conn.rs = conn.stmt.executeQuery("select project.* from orderproject inner join project\r\n"
 					+ "on orderproject.project_id = project.id\r\n" + "and employee_id=" + ap.getId());
-			this.show(conn.rs, type);
+			this.showType(conn.rs, type);
 			i++;
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -179,7 +179,7 @@ public class OrderProjectRepository implements OrderProjectRepositoryInterface {
 	}
 
 	@Override
-	public void DisplayAll(ConnectionSQL conn) {
+	public void displayAll(ConnectionSQL conn) {
 		// TODO Auto-generated method stub
 		try {
 			conn.rs = conn.stmt.executeQuery("select * from orderProject");
@@ -190,7 +190,7 @@ public class OrderProjectRepository implements OrderProjectRepositoryInterface {
 	}
 
 	@Override
-	public void SearchOrderProject(ConnectionSQL conn) {
+	public void search(ConnectionSQL conn) {
 		// TODO Auto-generated method stub
 		System.out.println("Enter the OrderProject ID to search :");
 		emp.setId(sc.nextInt());
@@ -199,7 +199,7 @@ public class OrderProjectRepository implements OrderProjectRepositoryInterface {
 			conn.rs = conn.stmt.executeQuery("select * from orderproject");
 			while (conn.rs.next()) {
 				if (emp.getId() == conn.rs.getInt(1)) {
-					this.showOrderProject(conn.rs);
+					this.show(conn.rs);
 					i++;
 				}
 			}
@@ -209,6 +209,24 @@ public class OrderProjectRepository implements OrderProjectRepositoryInterface {
 		if (i == 0) {
 			System.out.println("\nOrderProject Details are not available, Please enter a valid ID!!");
 		}
+	}
+
+	@Override
+	public void add(ConnectionSQL conn) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void edit(ConnectionSQL conn) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delete(ConnectionSQL conn) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
