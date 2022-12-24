@@ -1,0 +1,26 @@
+What is a Stream?
+- an abstraction
+- focuses on the all instead of the parts
+- imperative to functional programming
+- used with collections
+
+How to use Java Streams?
+1 - Start with a collection
+	array
+	set
+	list
+	map
+
+2 - list.stream()
+	-> stream	-> stream	-> stream
+	filter		map			reduce
+(intermediate operators)
+
+3 -  back to concrete
+	list
+	int
+	object
+	optional
+	string
+sum(), collect(Collections.toList()) -> terminal operators
+, average(), collect(Collections.groupingBy()) -> terminal operators
